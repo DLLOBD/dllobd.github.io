@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>CLÁUSULAS AND, OR, BETWEEN, IN, LIKE | DESARROLLO DE BASES DE DATOS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="JORGE IVAN BEDOYA RESTREPO" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-16"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">DESARROLLO DE BASES DE DATOS</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">DESARROLLO DE BASES DE DATOS</a></li>
+   <li><a href="introduccion_a_sql_server.html" class="daddy">INTRODUCCION A SQL SERVER</a>
+   <ul class="other-section">
+      <li><a href="lenguaje_sql.html" class="no-ch">LENGUAJE SQL</a></li>
+      <li><a href="sql_vs_sql_server.html" class="no-ch">SQL VS SQL SERVER</a></li>
+      <li><a href="historia_de_sql_server.html" class="no-ch">HISTORIA DE SQL SERVER</a></li>
+      <li><a href="conectar_a_sql_server.html" class="no-ch">CONECTAR A SQL SERVER</a></li>
+      <li><a href="bases_de_datos_del_sistema.html" class="no-ch">BASES DE DATOS DEL SISTEMA</a></li>
+      <li><a href="gestion_de_backups.html" class="no-ch">GESTION DE BACKUPS</a></li>
+   </ul>
+   </li>
+   <li><a href="crud_en_sql_server.html" class="daddy">CRUD EN SQL SERVER</a>
+   <ul class="other-section">
+      <li><a href="gestion_de_bases_de_datos.html" class="no-ch">GESTION DE BASES DE DATOS</a></li>
+      <li><a href="gestion_de_tablas.html" class="no-ch">GESTION DE TABLAS</a></li>
+      <li><a href="campos_tipo_identity.html" class="no-ch">CAMPOS TIPO IDENTITY</a></li>
+      <li><a href="insercion_de_datos.html" class="no-ch">INSERCION DE DATOS</a></li>
+      <li><a href="actualizacion_de_datos.html" class="no-ch">ACTUALIZACION DE DATOS</a></li>
+      <li><a href="borrado_de_datos.html" class="no-ch">BORRADO DE DATOS</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="consulta_de_datos.html" class="current-page-parent daddy">CONSULTA DE DATOS</a>
+   <ul>
+      <li><a href="consultas_bsicas.html" class="no-ch">CONSULTAS BÁSICAS</a></li>
+      <li id="active"><a href="clusulas_and_or_between_in_like.html" class="active no-ch">CLÁUSULAS AND, OR, BETWEEN, IN, LIKE</a></li>
+      <li><a href="cualificacin_de_atributos.html" class="no-ch">CUALIFICACIÓN DE ATRIBUTOS</a></li>
+      <li><a href="funciones_agregadas.html" class="no-ch">FUNCIONES AGREGADAS</a></li>
+      <li><a href="ttulos_a_columnas_del_resultado.html" class="no-ch">TÍTULOS A COLUMNAS DEL RESULTADO</a></li>
+      <li><a href="clusulas_lower_y_upper.html" class="no-ch">CLÁUSULAS LOWER Y UPPER</a></li>
+      <li><a href="clusulas_day_month_year_substring.html" class="no-ch">CLÁUSULAS DAY, MONTH, YEAR, SUBSTRING</a></li>
+      <li><a href="order_by__asc__desc.html" class="no-ch">ORDER BY ... ASC / DESC</a></li>
+      <li><a href="clausula_top.html" class="no-ch">CLAUSULA TOP</a></li>
+      <li><a href="subconsultas.html" class="no-ch">SUBCONSULTAS</a></li>
+      <li><a href="clausula_group_by__having.html" class="no-ch">CLAUSULA GROUP BY / HAVING</a></li>
+      <li><a href="clausulas_any_y_all.html" class="no-ch">CLAUSULAS ANY Y ALL</a></li>
+   </ul>
+   </li>
+   <li><a href="relacion_entre_tablas.html" class="daddy">RELACION ENTRE TABLAS</a>
+   <ul class="other-section">
+      <li><a href="cmo_se_relacionan_tablas.html" class="no-ch">CÓMO SE RELACIONAN TABLAS?</a></li>
+      <li><a href="diagrama_de_la_base_de_datos.html" class="no-ch">DIAGRAMA DE LA BASE DE DATOS</a></li>
+      <li><a href="integridad_referencial.html" class="no-ch">INTEGRIDAD REFERENCIAL</a></li>
+   </ul>
+   </li>
+   <li><a href="joins.html" class="daddy">JOINS</a>
+   <ul class="other-section">
+      <li><a href="concepto_de_join.html" class="no-ch">CONCEPTO DE JOIN</a></li>
+      <li><a href="tipos_de_joins.html" class="daddy">TIPOS DE JOINS</a>
+      <ul class="other-section">
+         <li><a href="inner_join.html" class="no-ch">INNER JOIN</a></li>
+         <li><a href="left__right__full_join.html" class="no-ch">LEFT / RIGHT / FULL JOIN</a></li>
+      </ul>
+      </li>
+      <li><a href="joins_de_mas_de_dos_tablas.html" class="no-ch">JOINS DE MAS DE DOS TABLAS</a></li>
+   </ul>
+   </li>
+   <li><a href="algebra_relacional.html" class="daddy">ALGEBRA RELACIONAL</a>
+   <ul class="other-section">
+      <li><a href="introduccionque_es.html" class="no-ch">INTRODUCCION.....QUE ES?</a></li>
+      <li><a href="tipos_de_operaciones.html" class="no-ch">TIPOS DE OPERACIONES</a></li>
+      <li><a href="operaciones.html" class="daddy">OPERACIONES</a>
+      <ul class="other-section">
+         <li><a href="primarias.html" class="daddy">PRIMARIAS</a>
+         <ul class="other-section">
+            <li><a href="seleccion.html" class="no-ch">SELECCION</a></li>
+            <li><a href="proyeccion.html" class="no-ch">PROYECCION</a></li>
+            <li><a href="renombramiento.html" class="no-ch">RENOMBRAMIENTO</a></li>
+            <li><a href="union.html" class="no-ch">UNION</a></li>
+            <li><a href="diferencia.html" class="no-ch">DIFERENCIA</a></li>
+            <li><a href="producto_cartesiano.html" class="no-ch">PRODUCTO CARTESIANO</a></li>
+         </ul>
+         </li>
+         <li><a href="secundarias.html" class="daddy">SECUNDARIAS</a>
+         <ul class="other-section">
+            <li><a href="reunion_natural.html" class="no-ch">REUNION NATURAL</a></li>
+            <li><a href="interseccion.html" class="no-ch">INTERSECCION</a></li>
+            <li><a href="division.html" class="no-ch">DIVISION</a></li>
+         </ul>
+         </li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="vistas.html" class="no-ch">VISTAS</a></li>
+   <li><a href="calcular_atributos_derivados.html" class="no-ch">CALCULAR ATRIBUTOS DERIVADOS</a></li>
+   <li><a href="check_constraints.html" class="no-ch">CHECK CONSTRAINTS</a></li>
+   <li><a href="programacion_de_bases_de_datos.html" class="daddy">PROGRAMACION DE BASES DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="procedimientos_almacenados.html" class="no-ch">PROCEDIMIENTOS ALMACENADOS</a></li>
+      <li><a href="funciones_de_usuario.html" class="daddy">FUNCIONES DE USUARIO</a>
+      <ul class="other-section">
+         <li><a href="funciones_escalares.html" class="no-ch">FUNCIONES ESCALARES</a></li>
+         <li><a href="funciones_de_tablas.html" class="no-ch">FUNCIONES DE TABLAS</a></li>
+      </ul>
+      </li>
+      <li><a href="triggers.html" class="no-ch">TRIGGERS</a></li>
+      <li><a href="control_de_errores.html" class="no-ch">CONTROL DE ERRORES</a></li>
+      <li><a href="transacciones__atomicidad.html" class="no-ch">TRANSACCIONES / ATOMICIDAD</a></li>
+      <li><a href="manejo_de_cursores.html" class="no-ch">MANEJO DE CURSORES</a></li>
+   </ul>
+   </li>
+   <li><a href="temas_adicionales.html" class="daddy">TEMAS ADICIONALES</a>
+   <ul class="other-section">
+      <li><a href="encriptamiento_de_datos.html" class="no-ch">ENCRIPTAMIENTO DE DATOS</a></li>
+      <li><a href="clusula_case.html" class="no-ch">CLÁUSULA CASE</a></li>
+      <li><a href="inserts_con_datos_de_otras_tablas.html" class="no-ch">INSERTs CON DATOS DE OTRAS TABLAS</a></li>
+      <li><a href="manejo_de_nulos.html" class="no-ch">MANEJO DE NULOS</a></li>
+      <li><a href="truncate_vs_delete_vs_drop.html" class="no-ch">TRUNCATE vs DELETE vs DROP</a></li>
+      <li><a href="merge.html" class="no-ch">MERGE</a></li>
+      <li><a href="otros_comodines_del_like.html" class="no-ch">OTROS COMODINES DEL LIKE</a></li>
+      <li><a href="funciones_numricas.html" class="no-ch">FUNCIONES NUMÉRICAS</a></li>
+      <li><a href="funciones_tipo_fecha.html" class="no-ch">FUNCIONES TIPO FECHA</a></li>
+      <li><a href="funciones_tipo_string.html" class="no-ch">FUNCIONES TIPO STRING</a></li>
+      <li><a href="clausula_default.html" class="no-ch">CLAUSULA DEFAULT</a></li>
+      <li><a href="clausula_distinct.html" class="no-ch">CLAUSULA DISTINCT</a></li>
+      <li><a href="borrado__actualizacion_en_cascada.html" class="no-ch">BORRADO / ACTUALIZACION EN CASCADA</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="consultas_bsicas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="cualificacin_de_atributos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">CLÁUSULAS AND, OR, BETWEEN, IN, LIKE</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id38">
+<div class="iDevice emphasis0" >
+<div id="ta38_109_2" class="block iDevice_content">
+<div class="exe-text"><p><strong>Cláusulas AND y OR</strong></p>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: justify;"><img src="YUNIS.png" alt="YUN" title="YUN" width="490" height="296" /></td>
+<td style="width: 50%; text-align: justify;">
+<p>Supongamos la tabla de mascotas que se ve en la imagen. Si queremos imprimir los datos de las mascotas cuya edad es 5 y cuyo código de tipo es 3 (ambas condiciones se deben cumplir), la instrucción es la siguiente:</p>
+<p>SELECT *</p>
+<p>FROM MASCOTA</p>
+<p>WHERE EDAD = 5 AND CODTIPO = 3</p>
+<p>La única mascota que cumple con las dos condiciones es YUNIS. Por ejemplo, IMILIS cumple con la condición de la edad, pero no cumple con la condición del código de tipo. </p>
+<p>Hay que recordar que en la tabla de verdad del AND, el resultado es verdadero cuando todas las proposiciones son verdaderas.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: justify;"><img src="OR.png" alt="OR" title="OR" width="490" height="296" /></td>
+<td style="width: 50%; text-align: justify;">
+<p>Por otro lado, si al SELECT anterior le cambiamos el AND por el OR, de tal forma que la instrucción queda de la siguiente manera:</p>
+<p>SELECT *</p>
+<p>FROM MASCOTA</p>
+<p>WHERE EDAD = 5 OR CODTIPO = 3</p>
+<p>Si ejecutamos el anterior SELECT, da como resultado las cuatro tuplas marcadas en rojo. Según la tabla de verdad del OR, el resultado es verdadero si alguna de las proposiciones es verdadera.</p>
+<p>La mascota HUMBIS cumple con la condición porque una de las dos condiciones es verdadera (CODTIPO = 3). Igualmente IMILIS y DAYRO (EDAD = 5). Para el caso de YUNIS, cumple con las dos condiciones, lo que hace que también salga en el resultado.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: justify;"><img src="ANDOR.png" alt="ANDOR" title="ANDOR" width="490" height="296" /></td>
+<td style="width: 50%; text-align: justify;">
+<p>Supongamos los siguientes casos:</p>
+<p>Caso No. 1: Resultado: 2 tuplas (rojo)</p>
+<p>SELECT *</p>
+<p>FROM MASCOTA</p>
+<p>WHERE EDAD = 5 AND (CODTIPO = 1 OR CODTIPO = 3)</p>
+<p>Caso No. 2: Resultado: 3 tuplas (azul)</p>
+<p>SELECT *</p>
+<p>FROM MASCOTA</p>
+<p>WHERE (EDAD = 5 AND CODTIPO = 1) OR CODTIPO = 3</p>
+<p>Es muy importante mencionar que cuando en las condiciones del WHERE hay una combinación de ANDs y ORs, las condiciones se deben saber agrupar convenientemente con parentesis, segun lo que se necesita. Como se puede ver en el ejemplo, el caso No. 1 da como resultado dos tuplas, mientras el caso No. 2 da como resultado tres tuplas.</p>
+<p>Si hay una combinación de ANDs y ORs y no se colocan paréntesis, se debe saber que el AND tiene mayor prioridad que el OR, por lo tanto se evaluan primero.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"><strong>Cláusula BETWEEN</strong></p>
+<p style="text-align: justify;">Para los datos anteriores, consideremos la siguiente necesidad: Consultar los datos de las mascotas cuya edad esté entre 1 y 4.</p>
+<p style="text-align: justify;">Podríamos hacer la consulta con la siguiente instrucción:</p>
+<p style="text-align: justify;">SELECT * FROM MASCOTA WHERE EDAD &gt;= 1 AND EDAD &lt;= 4</p>
+<p style="text-align: justify;">Dicha consulta también se podría hacer de la siguiente manera:</p>
+<p style="text-align: justify;">SELECT * FROM MASCOTA WHERE EDAD BETWEEN 1 AND 4</p>
+<p style="text-align: justify;">Ambas instrucciones generan el mismo resultado. La cláusula BETWEEN permite saber si el valor de un campo está en un rango de valores. El BETWEEN incluye el límite inferior y superior, es decir, en este caso, incluye mascotas que tengan 1 año y 4 años.</p>
+<p style="text-align: justify;"><strong>Cláusula IN</strong></p>
+<p style="text-align: justify;">Consultar los datos de las mascotas que tengan alguna de las siguientes edades: 1, 5, 8, 11</p>
+<p style="text-align: justify;">Hay dos maneras de hacer la consulta:</p>
+<p style="text-align: justify;">SELECT * FROM MASCOTA WHERE EDAD = 1 OR EDAD = 5 OR EDAD = 8 OR EDAD = 11</p>
+<p style="text-align: justify;">SELECT * FROM MASCOTA WHERE EDAD IN (1, 5, 8, 11)</p>
+<p style="text-align: justify;">Con la cláusula IN podemos saber si el valor de un campo es igual a algún elemento de un conjunto de valores.</p>
+<p style="text-align: justify;"><strong>Cláusula LIKE</strong></p>
+<p style="text-align: justify;">Vamos a consultar los datos de las mascotas cuyo nombre comience por la letra P (Peluche y Pepe, en este caso).</p>
+<p style="text-align: justify;">SELECT * FROM MASCOTA WHERE NOMBRE LIKE 'P%'</p>
+<p style="text-align: justify;">La cláusula LIKE permite saber si el valor de un campo cumple con un patrón. Para ello se vale de lo que se llaman caracteres comodines. En este caso, le estamos diciendo que consulte las mascotas cuyo nombre comience por la letra P (por eso, ponemos la P al principio de las comillas) y esté seguido por 0, 1 o más caracteres, sin importar cuales sean (ese es el significado del caracter comodín %).</p>
+<p style="text-align: justify;">Supongamos que queremos consultar los datos de las mascotas cuyo nombre termine por la letra S (Yunis, Humbis, Imilis en este caso).</p>
+<p style="text-align: justify;">La instrucción se transformaría de la siguiente manera:</p>
+<p style="text-align: justify;">SELECT * FROM MASCOTA WHERE NOMBRE LIKE '%S'</p>
+<p style="text-align: justify;">Y si queremos consultar los datos de las mascotas cuyo nombre contiene la letra G, sin importar en cuál posición (GYNA y RINGO, en este caso), la instrucción sería la siguiente:</p>
+<p style="text-align: justify;">SELECT * FROM MASCOTA WHERE NOMBRE LIKE '%G%'</p>
+<p style="text-align: justify;">En un apartado posterior de este curso, abordaremos otros caracteres comodines utilizados con el LIKE.</p>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><a href="https://youtu.be/xGWFbgnryXs">Uso de AND y OR en el SELECT</a></td>
+<td style="width: 50%; text-align: center;"><a href="https://youtu.be/Ity4qIdy_r0">Uso del BETWEEEN en el SELECT</a></td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;"><a href="https://youtu.be/T07cMvOMSHs">Uso del IN en el SELECT</a></td>
+<td style="width: 50%; text-align: center;"><a href="https://youtu.be/MB3x0mGHNuo">Uso del LIKE en el SELECT</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="consultas_bsicas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="cualificacin_de_atributos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>OTROS COMODINES DEL LIKE | DESARROLLO DE BASES DE DATOS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="JORGE IVAN BEDOYA RESTREPO" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-76"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">DESARROLLO DE BASES DE DATOS</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">DESARROLLO DE BASES DE DATOS</a></li>
+   <li><a href="introduccion_a_sql_server.html" class="daddy">INTRODUCCION A SQL SERVER</a>
+   <ul class="other-section">
+      <li><a href="lenguaje_sql.html" class="no-ch">LENGUAJE SQL</a></li>
+      <li><a href="sql_vs_sql_server.html" class="no-ch">SQL VS SQL SERVER</a></li>
+      <li><a href="historia_de_sql_server.html" class="no-ch">HISTORIA DE SQL SERVER</a></li>
+      <li><a href="conectar_a_sql_server.html" class="no-ch">CONECTAR A SQL SERVER</a></li>
+      <li><a href="bases_de_datos_del_sistema.html" class="no-ch">BASES DE DATOS DEL SISTEMA</a></li>
+      <li><a href="gestion_de_backups.html" class="no-ch">GESTION DE BACKUPS</a></li>
+   </ul>
+   </li>
+   <li><a href="crud_en_sql_server.html" class="daddy">CRUD EN SQL SERVER</a>
+   <ul class="other-section">
+      <li><a href="gestion_de_bases_de_datos.html" class="no-ch">GESTION DE BASES DE DATOS</a></li>
+      <li><a href="gestion_de_tablas.html" class="no-ch">GESTION DE TABLAS</a></li>
+      <li><a href="campos_tipo_identity.html" class="no-ch">CAMPOS TIPO IDENTITY</a></li>
+      <li><a href="insercion_de_datos.html" class="no-ch">INSERCION DE DATOS</a></li>
+      <li><a href="actualizacion_de_datos.html" class="no-ch">ACTUALIZACION DE DATOS</a></li>
+      <li><a href="borrado_de_datos.html" class="no-ch">BORRADO DE DATOS</a></li>
+   </ul>
+   </li>
+   <li><a href="consulta_de_datos.html" class="daddy">CONSULTA DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="consultas_bsicas.html" class="no-ch">CONSULTAS BÁSICAS</a></li>
+      <li><a href="clusulas_and_or_between_in_like.html" class="no-ch">CLÁUSULAS AND, OR, BETWEEN, IN, LIKE</a></li>
+      <li><a href="cualificacin_de_atributos.html" class="no-ch">CUALIFICACIÓN DE ATRIBUTOS</a></li>
+      <li><a href="funciones_agregadas.html" class="no-ch">FUNCIONES AGREGADAS</a></li>
+      <li><a href="ttulos_a_columnas_del_resultado.html" class="no-ch">TÍTULOS A COLUMNAS DEL RESULTADO</a></li>
+      <li><a href="clusulas_lower_y_upper.html" class="no-ch">CLÁUSULAS LOWER Y UPPER</a></li>
+      <li><a href="clusulas_day_month_year_substring.html" class="no-ch">CLÁUSULAS DAY, MONTH, YEAR, SUBSTRING</a></li>
+      <li><a href="order_by__asc__desc.html" class="no-ch">ORDER BY ... ASC / DESC</a></li>
+      <li><a href="clausula_top.html" class="no-ch">CLAUSULA TOP</a></li>
+      <li><a href="subconsultas.html" class="no-ch">SUBCONSULTAS</a></li>
+      <li><a href="clausula_group_by__having.html" class="no-ch">CLAUSULA GROUP BY / HAVING</a></li>
+      <li><a href="clausulas_any_y_all.html" class="no-ch">CLAUSULAS ANY Y ALL</a></li>
+   </ul>
+   </li>
+   <li><a href="relacion_entre_tablas.html" class="daddy">RELACION ENTRE TABLAS</a>
+   <ul class="other-section">
+      <li><a href="cmo_se_relacionan_tablas.html" class="no-ch">CÓMO SE RELACIONAN TABLAS?</a></li>
+      <li><a href="diagrama_de_la_base_de_datos.html" class="no-ch">DIAGRAMA DE LA BASE DE DATOS</a></li>
+      <li><a href="integridad_referencial.html" class="no-ch">INTEGRIDAD REFERENCIAL</a></li>
+   </ul>
+   </li>
+   <li><a href="joins.html" class="daddy">JOINS</a>
+   <ul class="other-section">
+      <li><a href="concepto_de_join.html" class="no-ch">CONCEPTO DE JOIN</a></li>
+      <li><a href="tipos_de_joins.html" class="daddy">TIPOS DE JOINS</a>
+      <ul class="other-section">
+         <li><a href="inner_join.html" class="no-ch">INNER JOIN</a></li>
+         <li><a href="left__right__full_join.html" class="no-ch">LEFT / RIGHT / FULL JOIN</a></li>
+      </ul>
+      </li>
+      <li><a href="joins_de_mas_de_dos_tablas.html" class="no-ch">JOINS DE MAS DE DOS TABLAS</a></li>
+   </ul>
+   </li>
+   <li><a href="algebra_relacional.html" class="daddy">ALGEBRA RELACIONAL</a>
+   <ul class="other-section">
+      <li><a href="introduccionque_es.html" class="no-ch">INTRODUCCION.....QUE ES?</a></li>
+      <li><a href="tipos_de_operaciones.html" class="no-ch">TIPOS DE OPERACIONES</a></li>
+      <li><a href="operaciones.html" class="daddy">OPERACIONES</a>
+      <ul class="other-section">
+         <li><a href="primarias.html" class="daddy">PRIMARIAS</a>
+         <ul class="other-section">
+            <li><a href="seleccion.html" class="no-ch">SELECCION</a></li>
+            <li><a href="proyeccion.html" class="no-ch">PROYECCION</a></li>
+            <li><a href="renombramiento.html" class="no-ch">RENOMBRAMIENTO</a></li>
+            <li><a href="union.html" class="no-ch">UNION</a></li>
+            <li><a href="diferencia.html" class="no-ch">DIFERENCIA</a></li>
+            <li><a href="producto_cartesiano.html" class="no-ch">PRODUCTO CARTESIANO</a></li>
+         </ul>
+         </li>
+         <li><a href="secundarias.html" class="daddy">SECUNDARIAS</a>
+         <ul class="other-section">
+            <li><a href="reunion_natural.html" class="no-ch">REUNION NATURAL</a></li>
+            <li><a href="interseccion.html" class="no-ch">INTERSECCION</a></li>
+            <li><a href="division.html" class="no-ch">DIVISION</a></li>
+         </ul>
+         </li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="vistas.html" class="no-ch">VISTAS</a></li>
+   <li><a href="calcular_atributos_derivados.html" class="no-ch">CALCULAR ATRIBUTOS DERIVADOS</a></li>
+   <li><a href="check_constraints.html" class="no-ch">CHECK CONSTRAINTS</a></li>
+   <li><a href="programacion_de_bases_de_datos.html" class="daddy">PROGRAMACION DE BASES DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="procedimientos_almacenados.html" class="no-ch">PROCEDIMIENTOS ALMACENADOS</a></li>
+      <li><a href="funciones_de_usuario.html" class="daddy">FUNCIONES DE USUARIO</a>
+      <ul class="other-section">
+         <li><a href="funciones_escalares.html" class="no-ch">FUNCIONES ESCALARES</a></li>
+         <li><a href="funciones_de_tablas.html" class="no-ch">FUNCIONES DE TABLAS</a></li>
+      </ul>
+      </li>
+      <li><a href="triggers.html" class="no-ch">TRIGGERS</a></li>
+      <li><a href="control_de_errores.html" class="no-ch">CONTROL DE ERRORES</a></li>
+      <li><a href="transacciones__atomicidad.html" class="no-ch">TRANSACCIONES / ATOMICIDAD</a></li>
+      <li><a href="manejo_de_cursores.html" class="no-ch">MANEJO DE CURSORES</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="temas_adicionales.html" class="current-page-parent daddy">TEMAS ADICIONALES</a>
+   <ul>
+      <li><a href="encriptamiento_de_datos.html" class="no-ch">ENCRIPTAMIENTO DE DATOS</a></li>
+      <li><a href="clusula_case.html" class="no-ch">CLÁUSULA CASE</a></li>
+      <li><a href="inserts_con_datos_de_otras_tablas.html" class="no-ch">INSERTs CON DATOS DE OTRAS TABLAS</a></li>
+      <li><a href="manejo_de_nulos.html" class="no-ch">MANEJO DE NULOS</a></li>
+      <li><a href="truncate_vs_delete_vs_drop.html" class="no-ch">TRUNCATE vs DELETE vs DROP</a></li>
+      <li><a href="merge.html" class="no-ch">MERGE</a></li>
+      <li id="active"><a href="otros_comodines_del_like.html" class="active no-ch">OTROS COMODINES DEL LIKE</a></li>
+      <li><a href="funciones_numricas.html" class="no-ch">FUNCIONES NUMÉRICAS</a></li>
+      <li><a href="funciones_tipo_fecha.html" class="no-ch">FUNCIONES TIPO FECHA</a></li>
+      <li><a href="funciones_tipo_string.html" class="no-ch">FUNCIONES TIPO STRING</a></li>
+      <li><a href="clausula_default.html" class="no-ch">CLAUSULA DEFAULT</a></li>
+      <li><a href="clausula_distinct.html" class="no-ch">CLAUSULA DISTINCT</a></li>
+      <li><a href="borrado__actualizacion_en_cascada.html" class="no-ch">BORRADO / ACTUALIZACION EN CASCADA</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="merge.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="funciones_numricas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">OTROS COMODINES DEL LIKE</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id112">
+<div class="iDevice emphasis0" >
+<div id="ta112_112_2" class="block iDevice_content">
+<div class="exe-text"><table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%;">
+<p><img src="img0.8.png" width="380" height="250" alt="RVFB" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: center;"><span style="font-size: 8pt;">Fuente. https://estradawebgroup.com/Post/-Que-es-SQL-Like-y-para-que-sirve-/4274</span></p>
+</td>
+<td style="width: 50%;">
+<p style="text-align: justify;"><span style="font-size: 12pt;">El caracter comodín más conocido para ser utilizado con la cláusula LIKE es el %, el cual significa 0, uno o más caracteres cualquiera. Pero no es el único comodín que existe. </span></p>
+<p style="text-align: justify;"><span style="font-size: 12pt;">En este módulo se abordan otros comodines útiles para ser utilizados con la cláusula LIKE.</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Sea la siguiente una tabla con datos de empleados de una compañía:</span></p>
+<p><img src="img1.9.png" width="421" height="276" alt="RVF" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Suponer que se desea consultar los datos de los empleados cuyo nombre tenga la letra A en la tercera posición(la primera posición de un string es la uno). Esta consulta se hace con la siguiente instrucción:</span></p>
+<p><img src="img2.9.png" width="478" height="230" alt="EDC" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Como se puede observar, se utiliza un nuevo comodín, el guión bajo (_). En el ejemplo, dentro del LIKE hay dos guiones bajos, la letra A y el comodín %. Esto significa que debe seleccionar los nombres cuyos primeros dos caracteres sean cualquiera, el tercer caracter sea la letra A, y esté seguida de cualquier cadena de caracteres. Se observa que tanto Blanca, Juan y Ana tienen una a en la tercera posición.</span></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Se concluye con esto que el comodín guion bajo (_) significa UNO y solo UN caracter cualquiera.</span></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Por otra parte, consideremos que se desea consultar los datos de los empleados cuya primera letra del nombre sea A, G o L. ESta consulta se podría hacer de dos maneras distintas:</span></p>
+<p><img src="img3.6.png" width="445" height="286" alt="CD" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">En esta solución se tiene la utilización del comodín %.</span></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">La otra manera de hacer la consulta es:</span></p>
+<p><img src="img4.5.png" width="475" height="248" alt="CD" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Aparece en escena un nuevo comodín (en realidad, dos): [ ]. Estos corchetes permiten enunciar dos cosas: una lista de posibles valores, o un rango de valores. En este caso, los corchetes indican una lista de posibles valores, es decir, consultar los empleados cuya primera letra del nombre sea A, G o L y que esté seguido de cualquier cadena de caracteres.</span></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">A continuación abordemos un ejemplo donde los corchetes permiten enunciar un rango de valores. Consultar los datos de los empleados cuyo nombre comience por una letra entre M y X. Se puede observar que la consulta debe sacar como resultado a Mario Marín y Verónica Pérez. La consulta se hace de la siguiente manera:</span></p>
+<p style="text-align: justify;"><img src="img5.3.png" width="482" height="240" alt="SX" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Con el guion (-) dentro de los corchetes ([ ]) se puede especificar un rango de datos. En este caso, empleados cuya primera letra del nombre esté entre M y X (M,N,O,P,Q,R,S,T,U,V,W,X).</span></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Es de aclarar que todos los comodines anteriores también funcionan con datos de tipo numérico.</span></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Existe otro comodín que es la negación de los valores que hay dentro de los corchetes. Este comodín es ^.</span></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Para entender este comodín, considerar la siguiente instrucción y su respectivo resultado:</span></p>
+<p><img src="img6.2.png" width="457" height="261" alt="IMN" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">En este caso, se estan consultando los empleados cuya primera letra del nombre NO esté entre M y X, no sale Mario Marin ni Verónica Pérez.</span></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Ahora considerar la siguiente instrucción:</span></p>
+<p><img src="img7.2.png" width="496" height="261" alt="OK" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">La anterior instrucción consulta los empleados cuya primera letra del nombre NO sea ni A ni G ni L.</span></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Como conslusión, los siguientes son los comodines que se pueden usar con la cláusula LIKE:</span></p>
+<table border="1" style="width: 100%; height: 150px;">
+<tbody>
+<tr style="height: 25px;">
+<td style="width: 50%; height: 25px; text-align: center;"><strong><span style="font-size: 12pt;">COMODIN</span></strong></td>
+<td style="width: 50%; height: 25px; text-align: center;"><strong><span style="font-size: 12pt;">SIGNIFICADO</span></strong></td>
+</tr>
+<tr style="height: 25px;">
+<td style="width: 50%; height: 25px; text-align: center;"><span style="font-size: 12pt;">%</span></td>
+<td style="width: 50%; height: 25px;"><span style="font-size: 12pt;">Cero, uno o más caracteres cualquiera</span></td>
+</tr>
+<tr style="height: 25px;">
+<td style="width: 50%; height: 25px; text-align: center;"><span style="font-size: 12pt;">_</span></td>
+<td style="width: 50%; height: 25px;"><span style="font-size: 12pt;">Uno y solo un caracter cualquiera</span></td>
+</tr>
+<tr style="height: 25px;">
+<td style="width: 50%; height: 25px; text-align: center;"><span style="font-size: 12pt;">[val, val1, val2.....]</span></td>
+<td style="width: 50%; height: 25px; text-align: left;"><span style="font-size: 12pt;">Lista de posibles valores</span></td>
+</tr>
+<tr style="height: 25px; text-align: center;">
+<td style="width: 50%; height: 25px;"><span style="font-size: 12pt;">[val - val1]</span></td>
+<td style="width: 50%; height: 25px; text-align: left;"><span style="font-size: 12pt;">Rango de posibles valores</span></td>
+</tr>
+<tr style="height: 25px;">
+<td style="width: 50%; height: 25px; text-align: center;"><span style="font-size: 12pt;">[^...... ]</span></td>
+<td style="width: 50%; height: 25px;"><span style="font-size: 12pt;">Negación de lo que hay en los [ ]</span></td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-family: verdana, geneva, sans-serif;">Video:</span></p>
+<p><span style="font-family: verdana, geneva, sans-serif;"><a href="https://youtu.be/pzUuzY2Gly0">Otros comodines del LIKE</a></span></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="merge.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="funciones_numricas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

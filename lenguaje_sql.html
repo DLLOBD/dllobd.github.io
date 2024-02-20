@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>LENGUAJE SQL | DESARROLLO DE BASES DE DATOS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="JORGE IVAN BEDOYA RESTREPO" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-1"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">DESARROLLO DE BASES DE DATOS</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">DESARROLLO DE BASES DE DATOS</a></li>
+   <li class="current-page-parent"><a href="introduccion_a_sql_server.html" class="current-page-parent daddy">INTRODUCCION A SQL SERVER</a>
+   <ul>
+      <li id="active"><a href="lenguaje_sql.html" class="active no-ch">LENGUAJE SQL</a></li>
+      <li><a href="sql_vs_sql_server.html" class="no-ch">SQL VS SQL SERVER</a></li>
+      <li><a href="historia_de_sql_server.html" class="no-ch">HISTORIA DE SQL SERVER</a></li>
+      <li><a href="conectar_a_sql_server.html" class="no-ch">CONECTAR A SQL SERVER</a></li>
+      <li><a href="bases_de_datos_del_sistema.html" class="no-ch">BASES DE DATOS DEL SISTEMA</a></li>
+      <li><a href="gestion_de_backups.html" class="no-ch">GESTION DE BACKUPS</a></li>
+   </ul>
+   </li>
+   <li><a href="crud_en_sql_server.html" class="daddy">CRUD EN SQL SERVER</a>
+   <ul class="other-section">
+      <li><a href="gestion_de_bases_de_datos.html" class="no-ch">GESTION DE BASES DE DATOS</a></li>
+      <li><a href="gestion_de_tablas.html" class="no-ch">GESTION DE TABLAS</a></li>
+      <li><a href="campos_tipo_identity.html" class="no-ch">CAMPOS TIPO IDENTITY</a></li>
+      <li><a href="insercion_de_datos.html" class="no-ch">INSERCION DE DATOS</a></li>
+      <li><a href="actualizacion_de_datos.html" class="no-ch">ACTUALIZACION DE DATOS</a></li>
+      <li><a href="borrado_de_datos.html" class="no-ch">BORRADO DE DATOS</a></li>
+   </ul>
+   </li>
+   <li><a href="consulta_de_datos.html" class="daddy">CONSULTA DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="consultas_bsicas.html" class="no-ch">CONSULTAS BÁSICAS</a></li>
+      <li><a href="clusulas_and_or_between_in_like.html" class="no-ch">CLÁUSULAS AND, OR, BETWEEN, IN, LIKE</a></li>
+      <li><a href="cualificacin_de_atributos.html" class="no-ch">CUALIFICACIÓN DE ATRIBUTOS</a></li>
+      <li><a href="funciones_agregadas.html" class="no-ch">FUNCIONES AGREGADAS</a></li>
+      <li><a href="ttulos_a_columnas_del_resultado.html" class="no-ch">TÍTULOS A COLUMNAS DEL RESULTADO</a></li>
+      <li><a href="clusulas_lower_y_upper.html" class="no-ch">CLÁUSULAS LOWER Y UPPER</a></li>
+      <li><a href="clusulas_day_month_year_substring.html" class="no-ch">CLÁUSULAS DAY, MONTH, YEAR, SUBSTRING</a></li>
+      <li><a href="order_by__asc__desc.html" class="no-ch">ORDER BY ... ASC / DESC</a></li>
+      <li><a href="clausula_top.html" class="no-ch">CLAUSULA TOP</a></li>
+      <li><a href="subconsultas.html" class="no-ch">SUBCONSULTAS</a></li>
+      <li><a href="clausula_group_by__having.html" class="no-ch">CLAUSULA GROUP BY / HAVING</a></li>
+      <li><a href="clausulas_any_y_all.html" class="no-ch">CLAUSULAS ANY Y ALL</a></li>
+   </ul>
+   </li>
+   <li><a href="relacion_entre_tablas.html" class="daddy">RELACION ENTRE TABLAS</a>
+   <ul class="other-section">
+      <li><a href="cmo_se_relacionan_tablas.html" class="no-ch">CÓMO SE RELACIONAN TABLAS?</a></li>
+      <li><a href="diagrama_de_la_base_de_datos.html" class="no-ch">DIAGRAMA DE LA BASE DE DATOS</a></li>
+      <li><a href="integridad_referencial.html" class="no-ch">INTEGRIDAD REFERENCIAL</a></li>
+   </ul>
+   </li>
+   <li><a href="joins.html" class="daddy">JOINS</a>
+   <ul class="other-section">
+      <li><a href="concepto_de_join.html" class="no-ch">CONCEPTO DE JOIN</a></li>
+      <li><a href="tipos_de_joins.html" class="daddy">TIPOS DE JOINS</a>
+      <ul class="other-section">
+         <li><a href="inner_join.html" class="no-ch">INNER JOIN</a></li>
+         <li><a href="left__right__full_join.html" class="no-ch">LEFT / RIGHT / FULL JOIN</a></li>
+      </ul>
+      </li>
+      <li><a href="joins_de_mas_de_dos_tablas.html" class="no-ch">JOINS DE MAS DE DOS TABLAS</a></li>
+   </ul>
+   </li>
+   <li><a href="algebra_relacional.html" class="daddy">ALGEBRA RELACIONAL</a>
+   <ul class="other-section">
+      <li><a href="introduccionque_es.html" class="no-ch">INTRODUCCION.....QUE ES?</a></li>
+      <li><a href="tipos_de_operaciones.html" class="no-ch">TIPOS DE OPERACIONES</a></li>
+      <li><a href="operaciones.html" class="daddy">OPERACIONES</a>
+      <ul class="other-section">
+         <li><a href="primarias.html" class="daddy">PRIMARIAS</a>
+         <ul class="other-section">
+            <li><a href="seleccion.html" class="no-ch">SELECCION</a></li>
+            <li><a href="proyeccion.html" class="no-ch">PROYECCION</a></li>
+            <li><a href="renombramiento.html" class="no-ch">RENOMBRAMIENTO</a></li>
+            <li><a href="union.html" class="no-ch">UNION</a></li>
+            <li><a href="diferencia.html" class="no-ch">DIFERENCIA</a></li>
+            <li><a href="producto_cartesiano.html" class="no-ch">PRODUCTO CARTESIANO</a></li>
+         </ul>
+         </li>
+         <li><a href="secundarias.html" class="daddy">SECUNDARIAS</a>
+         <ul class="other-section">
+            <li><a href="reunion_natural.html" class="no-ch">REUNION NATURAL</a></li>
+            <li><a href="interseccion.html" class="no-ch">INTERSECCION</a></li>
+            <li><a href="division.html" class="no-ch">DIVISION</a></li>
+         </ul>
+         </li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="vistas.html" class="no-ch">VISTAS</a></li>
+   <li><a href="calcular_atributos_derivados.html" class="no-ch">CALCULAR ATRIBUTOS DERIVADOS</a></li>
+   <li><a href="check_constraints.html" class="no-ch">CHECK CONSTRAINTS</a></li>
+   <li><a href="programacion_de_bases_de_datos.html" class="daddy">PROGRAMACION DE BASES DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="procedimientos_almacenados.html" class="no-ch">PROCEDIMIENTOS ALMACENADOS</a></li>
+      <li><a href="funciones_de_usuario.html" class="daddy">FUNCIONES DE USUARIO</a>
+      <ul class="other-section">
+         <li><a href="funciones_escalares.html" class="no-ch">FUNCIONES ESCALARES</a></li>
+         <li><a href="funciones_de_tablas.html" class="no-ch">FUNCIONES DE TABLAS</a></li>
+      </ul>
+      </li>
+      <li><a href="triggers.html" class="no-ch">TRIGGERS</a></li>
+      <li><a href="control_de_errores.html" class="no-ch">CONTROL DE ERRORES</a></li>
+      <li><a href="transacciones__atomicidad.html" class="no-ch">TRANSACCIONES / ATOMICIDAD</a></li>
+      <li><a href="manejo_de_cursores.html" class="no-ch">MANEJO DE CURSORES</a></li>
+   </ul>
+   </li>
+   <li><a href="temas_adicionales.html" class="daddy">TEMAS ADICIONALES</a>
+   <ul class="other-section">
+      <li><a href="encriptamiento_de_datos.html" class="no-ch">ENCRIPTAMIENTO DE DATOS</a></li>
+      <li><a href="clusula_case.html" class="no-ch">CLÁUSULA CASE</a></li>
+      <li><a href="inserts_con_datos_de_otras_tablas.html" class="no-ch">INSERTs CON DATOS DE OTRAS TABLAS</a></li>
+      <li><a href="manejo_de_nulos.html" class="no-ch">MANEJO DE NULOS</a></li>
+      <li><a href="truncate_vs_delete_vs_drop.html" class="no-ch">TRUNCATE vs DELETE vs DROP</a></li>
+      <li><a href="merge.html" class="no-ch">MERGE</a></li>
+      <li><a href="otros_comodines_del_like.html" class="no-ch">OTROS COMODINES DEL LIKE</a></li>
+      <li><a href="funciones_numricas.html" class="no-ch">FUNCIONES NUMÉRICAS</a></li>
+      <li><a href="funciones_tipo_fecha.html" class="no-ch">FUNCIONES TIPO FECHA</a></li>
+      <li><a href="funciones_tipo_string.html" class="no-ch">FUNCIONES TIPO STRING</a></li>
+      <li><a href="clausula_default.html" class="no-ch">CLAUSULA DEFAULT</a></li>
+      <li><a href="clausula_distinct.html" class="no-ch">CLAUSULA DISTINCT</a></li>
+      <li><a href="borrado__actualizacion_en_cascada.html" class="no-ch">BORRADO / ACTUALIZACION EN CASCADA</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="introduccion_a_sql_server.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="sql_vs_sql_server.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">LENGUAJE SQL</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id82">
+<div class="iDevice emphasis0" >
+<div id="ta82_109_2" class="block iDevice_content">
+<div class="exe-text"><table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 28.0632%;">
+<p><img src="SQL.jpg" alt="SQL" width="405" height="224" /></p>
+<p><span style="font-size: 8pt;">Fuente. https://medium.com/@maniakhitoccori/sql-b%C3%A1sico-conceptos-b%C3%A1sicos-d937a8b19d02</span></p>
+</td>
+<td style="width: 71.9368%;">
+<p style="text-align: justify;">La sigla SQL significa Structured Query Language, Lenguaje de Consulta Estructurado. Es un lenguaje de consulta sobre bases de datos relacionales, mundialmente conocido y usado. Fue creado por IBM en la década de los 80's del siglo pasado.</p>
+<p style="text-align: justify;">Así como existen muchos lenguajes de programación en los cuales podemos implementar aplicaciones que manejen archivos convencionales de datos, también existen lenguajes que se crearon con el fin de optimizar el acceso a los datos de una base de datos.</p>
+<p style="text-align: justify;">Antes de entrar a detallar en el tema de los lenguajes utilizados en bases de datos, debemos tener claro los conceptos de lenguajes procedimentales y lenguajes no procedimentales. Así que procedamos a introducir estos dos conceptos. Es de aclarar que la definición que se va a dar de esto dos conceptos estará enmarcado dentro de su utilidad en aplicaciones que accedan a datos desde archivos o bases de datos (o cualquier otra estructura existente).</p>
+<p style="text-align: justify;">Qué es un lenguaje procedimental?</p>
+<p style="text-align: justify;">Si desarrollamos una aplicación que acceda a datos de cualquier medio a través de un lenguaje procedimental, debemos ser conscientes que vamos a tener que expresar en las instrucciones del programa, no solamente qué datos vamos a acceder, sino también la manera cómo vamos a acceder a ellos. Es decir, al escribir programas en este tipo de lenguajes, debemos estar atentos a especificar, además de los datos que necesitamos procesar, el algoritmo específico para recuperarlos del medio donde se encuentren.</p>
+<p style="text-align: justify;">Ejemplos típicos de este tipo de lenguajes son los lenguajes denominados de tercera generación: C, Visual Basic, Perl, entre otros.</p>
+<p style="text-align: justify;">Qué es un lenguaje no procedimental?</p>
+<p style="text-align: justify;">Con la definición anterior, es fácil deducir qué se entiende por un lenguaje no procedimental. A diferencia de los lenguajes procedimentales, en este tipo de lenguajes solo es necesario especificar dentro de las instrucciones que accedan a datos, qué datos vamos a recuperar. En realidad no nos importa el mecanismo de búsqueda que se vaya a implementar para recuperar los datos. Esto sería problema de "otra persona o entidad".  Las instrucciones dentro de un lenguaje no procedimental son más concisas debido a su único requerimiento de especificación de datos a recuperar.</p>
+<p style="text-align: justify;">Los lenguajes de acceso a datos no procedimentales se conocen como lenguajes de cuarta generación y en realidad son lenguajes que muchas veces no tienen nombre propio. Esto debido a que son lenguajes que, la mayoría de las veces, vienen incorporados como módulos de los DBMS. (Recuerden que un DBMS consta de dos grandes partes y una de ellas es un conjunto de software que permite optimizar la manipulación de la base de datos. Dentro de este software están los lenguajes de cuarta generación). Hay motores como Oracle y SQL Server que tienen sus lenguajes de cuarta generación denominados PL/SQL y Transact SQL respectivamente. Hay otros motores como Informix que tienen su propio lenguaje de cuarta generación pero se le conoce como "el 4GL de Informix", es decir, no tiene un nombre específico.</p>
+<p style="text-align: justify;">Vemos, con base en la exposición anterior, que obviamente los lenguajes procedimentales son mucho más complejos que los no procedimentales en cuanto al acceso de datos se refiere. Es decir, es mucho más fácil usar un lenguaje no procedimental que uno procedimental si de acceder datos de cualquier medio se trata.</p>
+<p style="text-align: justify;">Toda la contextualización anterior sirve para definir que el SQL, que es el lenguaje de consulta más utilizado en bases de datos, es un lenguaje no procedimental. Esto significa que el SQL es un lenguaje de cuarta generación. Lo que sucede es que, a diferencia de otros lenguajes, el SQL es un lenguaje que es aceptado como estándar mundial para acceso a bases de datos relacionales. Del tema de SQL como tal, hablaremos más adelante en este manual y estaremos ahondando en sus características generales y específicas.</p>
+<p style="text-align: justify;">Por lo tanto, nos damos cuenta que pedirle al DBMS que nos recupere los datos de una base de datos a través de SQL es una labor muy sencilla. Lo verdaderamente complejo son los mecanismos que debe implementar el DBMS, a través de sus algoritmos internos, para poder acceder a dichos datos de la manera más óptima posible.</p>
+<p style="text-align: justify;">De lo anterior se desprende que cuando yo invoco una instrucción de consulta en SQL, es el DBMS el responsable de implementar el "como" se van a acceder a los datos requeridos por dicha consulta. Es el DBMS el que haría lo que debería hacer el Analista/Programador si escribiera la misma consulta en un lenguaje procedimental.</p>
+<p style="text-align: justify;">Debemos enunciar en este momento el hecho de que SQL, que es un lenguaje de cuarta generación, tiene tres tipos de instrucciones:</p>
+<ol style="text-align: justify;">
+<li>Instrucciones DDL</li>
+<li>Instrucciones DML</li>
+<li>Instrucciones DCL</li>
+</ol>
+<p style="text-align: justify;">Veamos a continuación, de una manera genérica, a qué se refieren estos tipos de instrucciones.</p>
+<p style="text-align: justify;">Qué son instrucciones DDL?</p>
+<p style="text-align: justify;">La sigla DDL significa Data Definition Language, es decir, Lenguaje de Definición de Datos. Es a través de este tipo de instrucciones que se pueden definir las estructuras que se van a crear en la base de datos para contener los datos, es decir, son las instrucciones para crear lo que se denominan las tablas de la base de datos. Además, con este tipo de instrucciones se pueden definir reglas de integridad de datos, es decir, normas que deben cumplir los datos para considerarlos correctos dentro del contexto que maneja la base de datos.</p>
+<p style="text-align: justify;">Como conclusión podemos decir que el DDL permite definir el ESQUEMA de la base de datos.</p>
+<p style="text-align: justify;">Y qué significan instrucciones DML?</p>
+<p style="text-align: justify;">DML como sigla significa Data Manipulation Language. Es a través de este tipo de instrucciones que podemos manipular los datos que hay contenidos o grabados en la base de datos. En otras palabras, a través de instrucciones DML se pueden realizar las cuatro operaciones básicas sobre los datos: inserción de nuevos datos, actualización de datos ya existentes, borrado de datos y consulta de datos.</p>
+<p style="text-align: justify;">Y el DCL?</p>
+<p style="text-align: justify;">La sigla DCL viene de Data Control Language, en otras palabras, Lenguaje de Control de Datos. Qué se puede realizar con este tipo de instrucciones? A través de las instrucciones DCL podemos controlar el acceso a los datos, es decir, podemos definir perfiles de usuarios con sus respectivos permisos. Es a través de este tipo de lenguaje que podemos administrar lo que se denomina CONTROL DE ACCESO en el mundo de las bases de datos.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Video:</p>
+<p><a href="https://youtu.be/9jzKFUFCvW4">Lenguaje SQL - Introducción</a></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="introduccion_a_sql_server.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="sql_vs_sql_server.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

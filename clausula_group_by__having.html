@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>CLAUSULA GROUP BY / HAVING | DESARROLLO DE BASES DE DATOS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="JORGE IVAN BEDOYA RESTREPO" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-25"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">DESARROLLO DE BASES DE DATOS</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">DESARROLLO DE BASES DE DATOS</a></li>
+   <li><a href="introduccion_a_sql_server.html" class="daddy">INTRODUCCION A SQL SERVER</a>
+   <ul class="other-section">
+      <li><a href="lenguaje_sql.html" class="no-ch">LENGUAJE SQL</a></li>
+      <li><a href="sql_vs_sql_server.html" class="no-ch">SQL VS SQL SERVER</a></li>
+      <li><a href="historia_de_sql_server.html" class="no-ch">HISTORIA DE SQL SERVER</a></li>
+      <li><a href="conectar_a_sql_server.html" class="no-ch">CONECTAR A SQL SERVER</a></li>
+      <li><a href="bases_de_datos_del_sistema.html" class="no-ch">BASES DE DATOS DEL SISTEMA</a></li>
+      <li><a href="gestion_de_backups.html" class="no-ch">GESTION DE BACKUPS</a></li>
+   </ul>
+   </li>
+   <li><a href="crud_en_sql_server.html" class="daddy">CRUD EN SQL SERVER</a>
+   <ul class="other-section">
+      <li><a href="gestion_de_bases_de_datos.html" class="no-ch">GESTION DE BASES DE DATOS</a></li>
+      <li><a href="gestion_de_tablas.html" class="no-ch">GESTION DE TABLAS</a></li>
+      <li><a href="campos_tipo_identity.html" class="no-ch">CAMPOS TIPO IDENTITY</a></li>
+      <li><a href="insercion_de_datos.html" class="no-ch">INSERCION DE DATOS</a></li>
+      <li><a href="actualizacion_de_datos.html" class="no-ch">ACTUALIZACION DE DATOS</a></li>
+      <li><a href="borrado_de_datos.html" class="no-ch">BORRADO DE DATOS</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="consulta_de_datos.html" class="current-page-parent daddy">CONSULTA DE DATOS</a>
+   <ul>
+      <li><a href="consultas_bsicas.html" class="no-ch">CONSULTAS BÁSICAS</a></li>
+      <li><a href="clusulas_and_or_between_in_like.html" class="no-ch">CLÁUSULAS AND, OR, BETWEEN, IN, LIKE</a></li>
+      <li><a href="cualificacin_de_atributos.html" class="no-ch">CUALIFICACIÓN DE ATRIBUTOS</a></li>
+      <li><a href="funciones_agregadas.html" class="no-ch">FUNCIONES AGREGADAS</a></li>
+      <li><a href="ttulos_a_columnas_del_resultado.html" class="no-ch">TÍTULOS A COLUMNAS DEL RESULTADO</a></li>
+      <li><a href="clusulas_lower_y_upper.html" class="no-ch">CLÁUSULAS LOWER Y UPPER</a></li>
+      <li><a href="clusulas_day_month_year_substring.html" class="no-ch">CLÁUSULAS DAY, MONTH, YEAR, SUBSTRING</a></li>
+      <li><a href="order_by__asc__desc.html" class="no-ch">ORDER BY ... ASC / DESC</a></li>
+      <li><a href="clausula_top.html" class="no-ch">CLAUSULA TOP</a></li>
+      <li><a href="subconsultas.html" class="no-ch">SUBCONSULTAS</a></li>
+      <li id="active"><a href="clausula_group_by__having.html" class="active no-ch">CLAUSULA GROUP BY / HAVING</a></li>
+      <li><a href="clausulas_any_y_all.html" class="no-ch">CLAUSULAS ANY Y ALL</a></li>
+   </ul>
+   </li>
+   <li><a href="relacion_entre_tablas.html" class="daddy">RELACION ENTRE TABLAS</a>
+   <ul class="other-section">
+      <li><a href="cmo_se_relacionan_tablas.html" class="no-ch">CÓMO SE RELACIONAN TABLAS?</a></li>
+      <li><a href="diagrama_de_la_base_de_datos.html" class="no-ch">DIAGRAMA DE LA BASE DE DATOS</a></li>
+      <li><a href="integridad_referencial.html" class="no-ch">INTEGRIDAD REFERENCIAL</a></li>
+   </ul>
+   </li>
+   <li><a href="joins.html" class="daddy">JOINS</a>
+   <ul class="other-section">
+      <li><a href="concepto_de_join.html" class="no-ch">CONCEPTO DE JOIN</a></li>
+      <li><a href="tipos_de_joins.html" class="daddy">TIPOS DE JOINS</a>
+      <ul class="other-section">
+         <li><a href="inner_join.html" class="no-ch">INNER JOIN</a></li>
+         <li><a href="left__right__full_join.html" class="no-ch">LEFT / RIGHT / FULL JOIN</a></li>
+      </ul>
+      </li>
+      <li><a href="joins_de_mas_de_dos_tablas.html" class="no-ch">JOINS DE MAS DE DOS TABLAS</a></li>
+   </ul>
+   </li>
+   <li><a href="algebra_relacional.html" class="daddy">ALGEBRA RELACIONAL</a>
+   <ul class="other-section">
+      <li><a href="introduccionque_es.html" class="no-ch">INTRODUCCION.....QUE ES?</a></li>
+      <li><a href="tipos_de_operaciones.html" class="no-ch">TIPOS DE OPERACIONES</a></li>
+      <li><a href="operaciones.html" class="daddy">OPERACIONES</a>
+      <ul class="other-section">
+         <li><a href="primarias.html" class="daddy">PRIMARIAS</a>
+         <ul class="other-section">
+            <li><a href="seleccion.html" class="no-ch">SELECCION</a></li>
+            <li><a href="proyeccion.html" class="no-ch">PROYECCION</a></li>
+            <li><a href="renombramiento.html" class="no-ch">RENOMBRAMIENTO</a></li>
+            <li><a href="union.html" class="no-ch">UNION</a></li>
+            <li><a href="diferencia.html" class="no-ch">DIFERENCIA</a></li>
+            <li><a href="producto_cartesiano.html" class="no-ch">PRODUCTO CARTESIANO</a></li>
+         </ul>
+         </li>
+         <li><a href="secundarias.html" class="daddy">SECUNDARIAS</a>
+         <ul class="other-section">
+            <li><a href="reunion_natural.html" class="no-ch">REUNION NATURAL</a></li>
+            <li><a href="interseccion.html" class="no-ch">INTERSECCION</a></li>
+            <li><a href="division.html" class="no-ch">DIVISION</a></li>
+         </ul>
+         </li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="vistas.html" class="no-ch">VISTAS</a></li>
+   <li><a href="calcular_atributos_derivados.html" class="no-ch">CALCULAR ATRIBUTOS DERIVADOS</a></li>
+   <li><a href="check_constraints.html" class="no-ch">CHECK CONSTRAINTS</a></li>
+   <li><a href="programacion_de_bases_de_datos.html" class="daddy">PROGRAMACION DE BASES DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="procedimientos_almacenados.html" class="no-ch">PROCEDIMIENTOS ALMACENADOS</a></li>
+      <li><a href="funciones_de_usuario.html" class="daddy">FUNCIONES DE USUARIO</a>
+      <ul class="other-section">
+         <li><a href="funciones_escalares.html" class="no-ch">FUNCIONES ESCALARES</a></li>
+         <li><a href="funciones_de_tablas.html" class="no-ch">FUNCIONES DE TABLAS</a></li>
+      </ul>
+      </li>
+      <li><a href="triggers.html" class="no-ch">TRIGGERS</a></li>
+      <li><a href="control_de_errores.html" class="no-ch">CONTROL DE ERRORES</a></li>
+      <li><a href="transacciones__atomicidad.html" class="no-ch">TRANSACCIONES / ATOMICIDAD</a></li>
+      <li><a href="manejo_de_cursores.html" class="no-ch">MANEJO DE CURSORES</a></li>
+   </ul>
+   </li>
+   <li><a href="temas_adicionales.html" class="daddy">TEMAS ADICIONALES</a>
+   <ul class="other-section">
+      <li><a href="encriptamiento_de_datos.html" class="no-ch">ENCRIPTAMIENTO DE DATOS</a></li>
+      <li><a href="clusula_case.html" class="no-ch">CLÁUSULA CASE</a></li>
+      <li><a href="inserts_con_datos_de_otras_tablas.html" class="no-ch">INSERTs CON DATOS DE OTRAS TABLAS</a></li>
+      <li><a href="manejo_de_nulos.html" class="no-ch">MANEJO DE NULOS</a></li>
+      <li><a href="truncate_vs_delete_vs_drop.html" class="no-ch">TRUNCATE vs DELETE vs DROP</a></li>
+      <li><a href="merge.html" class="no-ch">MERGE</a></li>
+      <li><a href="otros_comodines_del_like.html" class="no-ch">OTROS COMODINES DEL LIKE</a></li>
+      <li><a href="funciones_numricas.html" class="no-ch">FUNCIONES NUMÉRICAS</a></li>
+      <li><a href="funciones_tipo_fecha.html" class="no-ch">FUNCIONES TIPO FECHA</a></li>
+      <li><a href="funciones_tipo_string.html" class="no-ch">FUNCIONES TIPO STRING</a></li>
+      <li><a href="clausula_default.html" class="no-ch">CLAUSULA DEFAULT</a></li>
+      <li><a href="clausula_distinct.html" class="no-ch">CLAUSULA DISTINCT</a></li>
+      <li><a href="borrado__actualizacion_en_cascada.html" class="no-ch">BORRADO / ACTUALIZACION EN CASCADA</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="subconsultas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="clausulas_any_y_all.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">CLAUSULA GROUP BY / HAVING</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id56">
+<div class="iDevice emphasis0" >
+<div id="ta56_109_2" class="block iDevice_content">
+<div class="exe-text"><p><span style="font-family: verdana, geneva, sans-serif;">La cláusulas GROUP BY y HAVING son muy útiles para consolidar y/o subtotalizar datos por alún criterio. Vamos a mirar un ejemplo para entender ambas cláusulas.</span></p>
+<p><span style="font-family: verdana, geneva, sans-serif;">Supongamos que tenemos una base de datos del Desfile de Autos Clásicos y Antiguos de la Feria de las Flores de la ciudad de Medellín. El desfile se hace en forma anual. Los carros desfilan con una cantidad de ocupantes dentro de ellos.....</span></p>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: justify;"><span style="font-size: 12pt;">Para tal fin, se tiene almacenado en una tabla los atos principales de cada carro.</span></td>
+<td style="width: 50%;"><img src="img0.2.png" width="458" height="248" alt="carros" style="display: block; margin-left: auto; margin-right: auto;" /></td>
+</tr>
+<tr>
+<td style="width: 50%;">
+<p style="text-align: justify;"><span style="font-size: 12pt;">Y en otra tabla, llamada DESFILA, se tienes los datos de los años en que cada carro ha desfilado y cuantos ocupantes tenía.</span></p>
+<p style="text-align: justify;"><span style="font-size: 12pt;">En la imagen podemos observar que el carro de placa AAA400, ha desfilado en los años 2015, 2018, 2020 y 2021, y en cada año tuvo una cantidad diferente de ocupantes. Cuando dicho carro desfiló en el 2015, tenía 2 ocupantes, cuando desfiló en el 2018 tenía un solo ocupante, etc.</span></p>
+<p style="text-align: justify;"><span style="font-size: 12pt;">Es importante entender que un carro puede desfilar en varios años de la edición del desfile.</span></p>
+</td>
+<td style="width: 50%;"><img src="img1.2.png" width="486" height="264" alt="desfila" style="display: block; margin-left: auto; margin-right: auto;" /></td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: justify;">
+<p><span style="font-size: 12pt;">Vamos a suponer que se necesita consultar la placa de cada carro, junto con la cantidad TOTAL de ocupantes que ha tenido en todos los años que ha desfilado.</span></p>
+<p><span style="font-size: 12pt;">Para hacer esto, como se ve la imagen, se deben agrupar las tuplas de la tabla por placa, es decir, se arman grupos de tuplas de igual placa. Y dentro de cada grupo conformado, se hace una suma de los valores del campo CANTOCUP.</span></p>
+<p><span style="font-size: 12pt;">De esta manera, vemos que el carro con placa AAA400 tuvo, en total, 13 ocupantes en todos los desfiles donde participo, el carro de placas CCC600 tuvo 12 ocupantes y el carro de placas EEE888 tuvo un solo ocupante.</span></p>
+<p style="text-align: justify;"><span style="font-size: 12pt;"> </span></p>
+</td>
+<td style="width: 50%;"><img src="img2.1.png" width="513" height="290" alt="group" style="display: block; margin-left: auto; margin-right: auto;" /></td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: justify;">
+<p><span style="font-size: 12pt;">La consulta se hace usando la cláusula GROUP BY. En el SELECT se imprime la placa y la suma de ocupantes de esa placa. Es de advertir que ambos datos se imprimen dentro de cada grupo conformado por la cláusula GROUP BY.</span></p>
+<p><span style="font-size: 12pt;">Con la clausula GROUP BY se define cuál es el criterio para conformar los grupos de tuplas y, dentro de cada grupo, se imprime lo que hay en el SELECT.</span></p>
+</td>
+<td style="width: 50%;"><img src="img3.1.png" width="527" height="287" alt="CONSUL" style="display: block; margin-left: auto; margin-right: auto;" /></td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-family: verdana, geneva, sans-serif;">Por otra parte, para que entendamos la cláusula HAVING, supongamos la siguiente situación en el anterior ejemplo:</span></p>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: justify;">
+<p><span style="font-size: 12pt;">Tenemos los carros agrupados por placa, y ya sabemos en total, cuantos ocupantes tuvo cada carro. Ahora necesitamos consultar solo los carros cuya cantidad total de ocupantes es superior a 10.</span></p>
+<p><span style="font-size: 12pt;">Como se puede apreciar en la imagen, de los tres carros, sólo dos van a ser mostrados en el resultado de la consulta.</span></p>
+<p><span style="font-size: 12pt;">Para eso, hay que ponerle una condición a la estadística (SUM) obtenida por cada grupo de tuplas.</span></p>
+</td>
+<td style="width: 50%;"><img src="img4.1.png" width="585" height="256" alt="HAVING" style="display: block; margin-left: auto; margin-right: auto;" /></td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: justify;">
+<p><span style="font-size: 12pt;">Ahí es donde entra en escena la cláusula HAVING.</span></p>
+<p><span style="font-size: 12pt;">La cláusula HAVING es utilizada para ponerle condiciones a la(s) estadística(s) calculada(s) por cada grupo de tuplas conformadas por GROUP BY. </span></p>
+<p><span style="font-size: 12pt;">Como se puede observar, el HAVING está definiendo la condición de que la suma de ocupantes hecha por cada carro sea mayor a 10.</span></p>
+<p><span style="font-size: 12pt;">Es importante decir que cuando la instrucción SELECT tiene un HAVING, es porque también hay un GROUP BY.</span></p>
+<p><span style="font-size: 12pt;">Y como conclusión, es bueno mencionar que el HAVING le pone condiciones a grupos de tuplas, mientras que el WHERE le pone condiciones a tuplas individuales.</span></p>
+<p><span style="font-size: 12pt;"> </span></p>
+</td>
+<td style="width: 50%;"><img src="img5.1.png" width="605" height="308" alt="HAVING1" style="display: block; margin-left: auto; margin-right: auto;" /></td>
+</tr>
+</tbody>
+</table>
+<p>Video:</p>
+<p><a href="https://youtu.be/WMlJt1KtcM0">Cláusula GROUP BY / HAVING</a></p>
+<p></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="subconsultas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="clausulas_any_y_all.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

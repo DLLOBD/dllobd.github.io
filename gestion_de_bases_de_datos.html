@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>GESTION DE BASES DE DATOS | DESARROLLO DE BASES DE DATOS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="JORGE IVAN BEDOYA RESTREPO" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-8"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">DESARROLLO DE BASES DE DATOS</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">DESARROLLO DE BASES DE DATOS</a></li>
+   <li><a href="introduccion_a_sql_server.html" class="daddy">INTRODUCCION A SQL SERVER</a>
+   <ul class="other-section">
+      <li><a href="lenguaje_sql.html" class="no-ch">LENGUAJE SQL</a></li>
+      <li><a href="sql_vs_sql_server.html" class="no-ch">SQL VS SQL SERVER</a></li>
+      <li><a href="historia_de_sql_server.html" class="no-ch">HISTORIA DE SQL SERVER</a></li>
+      <li><a href="conectar_a_sql_server.html" class="no-ch">CONECTAR A SQL SERVER</a></li>
+      <li><a href="bases_de_datos_del_sistema.html" class="no-ch">BASES DE DATOS DEL SISTEMA</a></li>
+      <li><a href="gestion_de_backups.html" class="no-ch">GESTION DE BACKUPS</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="crud_en_sql_server.html" class="current-page-parent daddy">CRUD EN SQL SERVER</a>
+   <ul>
+      <li id="active"><a href="gestion_de_bases_de_datos.html" class="active no-ch">GESTION DE BASES DE DATOS</a></li>
+      <li><a href="gestion_de_tablas.html" class="no-ch">GESTION DE TABLAS</a></li>
+      <li><a href="campos_tipo_identity.html" class="no-ch">CAMPOS TIPO IDENTITY</a></li>
+      <li><a href="insercion_de_datos.html" class="no-ch">INSERCION DE DATOS</a></li>
+      <li><a href="actualizacion_de_datos.html" class="no-ch">ACTUALIZACION DE DATOS</a></li>
+      <li><a href="borrado_de_datos.html" class="no-ch">BORRADO DE DATOS</a></li>
+   </ul>
+   </li>
+   <li><a href="consulta_de_datos.html" class="daddy">CONSULTA DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="consultas_bsicas.html" class="no-ch">CONSULTAS BÁSICAS</a></li>
+      <li><a href="clusulas_and_or_between_in_like.html" class="no-ch">CLÁUSULAS AND, OR, BETWEEN, IN, LIKE</a></li>
+      <li><a href="cualificacin_de_atributos.html" class="no-ch">CUALIFICACIÓN DE ATRIBUTOS</a></li>
+      <li><a href="funciones_agregadas.html" class="no-ch">FUNCIONES AGREGADAS</a></li>
+      <li><a href="ttulos_a_columnas_del_resultado.html" class="no-ch">TÍTULOS A COLUMNAS DEL RESULTADO</a></li>
+      <li><a href="clusulas_lower_y_upper.html" class="no-ch">CLÁUSULAS LOWER Y UPPER</a></li>
+      <li><a href="clusulas_day_month_year_substring.html" class="no-ch">CLÁUSULAS DAY, MONTH, YEAR, SUBSTRING</a></li>
+      <li><a href="order_by__asc__desc.html" class="no-ch">ORDER BY ... ASC / DESC</a></li>
+      <li><a href="clausula_top.html" class="no-ch">CLAUSULA TOP</a></li>
+      <li><a href="subconsultas.html" class="no-ch">SUBCONSULTAS</a></li>
+      <li><a href="clausula_group_by__having.html" class="no-ch">CLAUSULA GROUP BY / HAVING</a></li>
+      <li><a href="clausulas_any_y_all.html" class="no-ch">CLAUSULAS ANY Y ALL</a></li>
+   </ul>
+   </li>
+   <li><a href="relacion_entre_tablas.html" class="daddy">RELACION ENTRE TABLAS</a>
+   <ul class="other-section">
+      <li><a href="cmo_se_relacionan_tablas.html" class="no-ch">CÓMO SE RELACIONAN TABLAS?</a></li>
+      <li><a href="diagrama_de_la_base_de_datos.html" class="no-ch">DIAGRAMA DE LA BASE DE DATOS</a></li>
+      <li><a href="integridad_referencial.html" class="no-ch">INTEGRIDAD REFERENCIAL</a></li>
+   </ul>
+   </li>
+   <li><a href="joins.html" class="daddy">JOINS</a>
+   <ul class="other-section">
+      <li><a href="concepto_de_join.html" class="no-ch">CONCEPTO DE JOIN</a></li>
+      <li><a href="tipos_de_joins.html" class="daddy">TIPOS DE JOINS</a>
+      <ul class="other-section">
+         <li><a href="inner_join.html" class="no-ch">INNER JOIN</a></li>
+         <li><a href="left__right__full_join.html" class="no-ch">LEFT / RIGHT / FULL JOIN</a></li>
+      </ul>
+      </li>
+      <li><a href="joins_de_mas_de_dos_tablas.html" class="no-ch">JOINS DE MAS DE DOS TABLAS</a></li>
+   </ul>
+   </li>
+   <li><a href="algebra_relacional.html" class="daddy">ALGEBRA RELACIONAL</a>
+   <ul class="other-section">
+      <li><a href="introduccionque_es.html" class="no-ch">INTRODUCCION.....QUE ES?</a></li>
+      <li><a href="tipos_de_operaciones.html" class="no-ch">TIPOS DE OPERACIONES</a></li>
+      <li><a href="operaciones.html" class="daddy">OPERACIONES</a>
+      <ul class="other-section">
+         <li><a href="primarias.html" class="daddy">PRIMARIAS</a>
+         <ul class="other-section">
+            <li><a href="seleccion.html" class="no-ch">SELECCION</a></li>
+            <li><a href="proyeccion.html" class="no-ch">PROYECCION</a></li>
+            <li><a href="renombramiento.html" class="no-ch">RENOMBRAMIENTO</a></li>
+            <li><a href="union.html" class="no-ch">UNION</a></li>
+            <li><a href="diferencia.html" class="no-ch">DIFERENCIA</a></li>
+            <li><a href="producto_cartesiano.html" class="no-ch">PRODUCTO CARTESIANO</a></li>
+         </ul>
+         </li>
+         <li><a href="secundarias.html" class="daddy">SECUNDARIAS</a>
+         <ul class="other-section">
+            <li><a href="reunion_natural.html" class="no-ch">REUNION NATURAL</a></li>
+            <li><a href="interseccion.html" class="no-ch">INTERSECCION</a></li>
+            <li><a href="division.html" class="no-ch">DIVISION</a></li>
+         </ul>
+         </li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="vistas.html" class="no-ch">VISTAS</a></li>
+   <li><a href="calcular_atributos_derivados.html" class="no-ch">CALCULAR ATRIBUTOS DERIVADOS</a></li>
+   <li><a href="check_constraints.html" class="no-ch">CHECK CONSTRAINTS</a></li>
+   <li><a href="programacion_de_bases_de_datos.html" class="daddy">PROGRAMACION DE BASES DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="procedimientos_almacenados.html" class="no-ch">PROCEDIMIENTOS ALMACENADOS</a></li>
+      <li><a href="funciones_de_usuario.html" class="daddy">FUNCIONES DE USUARIO</a>
+      <ul class="other-section">
+         <li><a href="funciones_escalares.html" class="no-ch">FUNCIONES ESCALARES</a></li>
+         <li><a href="funciones_de_tablas.html" class="no-ch">FUNCIONES DE TABLAS</a></li>
+      </ul>
+      </li>
+      <li><a href="triggers.html" class="no-ch">TRIGGERS</a></li>
+      <li><a href="control_de_errores.html" class="no-ch">CONTROL DE ERRORES</a></li>
+      <li><a href="transacciones__atomicidad.html" class="no-ch">TRANSACCIONES / ATOMICIDAD</a></li>
+      <li><a href="manejo_de_cursores.html" class="no-ch">MANEJO DE CURSORES</a></li>
+   </ul>
+   </li>
+   <li><a href="temas_adicionales.html" class="daddy">TEMAS ADICIONALES</a>
+   <ul class="other-section">
+      <li><a href="encriptamiento_de_datos.html" class="no-ch">ENCRIPTAMIENTO DE DATOS</a></li>
+      <li><a href="clusula_case.html" class="no-ch">CLÁUSULA CASE</a></li>
+      <li><a href="inserts_con_datos_de_otras_tablas.html" class="no-ch">INSERTs CON DATOS DE OTRAS TABLAS</a></li>
+      <li><a href="manejo_de_nulos.html" class="no-ch">MANEJO DE NULOS</a></li>
+      <li><a href="truncate_vs_delete_vs_drop.html" class="no-ch">TRUNCATE vs DELETE vs DROP</a></li>
+      <li><a href="merge.html" class="no-ch">MERGE</a></li>
+      <li><a href="otros_comodines_del_like.html" class="no-ch">OTROS COMODINES DEL LIKE</a></li>
+      <li><a href="funciones_numricas.html" class="no-ch">FUNCIONES NUMÉRICAS</a></li>
+      <li><a href="funciones_tipo_fecha.html" class="no-ch">FUNCIONES TIPO FECHA</a></li>
+      <li><a href="funciones_tipo_string.html" class="no-ch">FUNCIONES TIPO STRING</a></li>
+      <li><a href="clausula_default.html" class="no-ch">CLAUSULA DEFAULT</a></li>
+      <li><a href="clausula_distinct.html" class="no-ch">CLAUSULA DISTINCT</a></li>
+      <li><a href="borrado__actualizacion_en_cascada.html" class="no-ch">BORRADO / ACTUALIZACION EN CASCADA</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="crud_en_sql_server.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="gestion_de_tablas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">GESTION DE BASES DE DATOS</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id45">
+<div class="iDevice emphasis0" >
+<div id="ta45_114_2" class="block iDevice_content">
+<div class="exe-text"><p><span style="font-family: arial, helvetica, sans-serif;">Para trabajar en SQL Server (y, en general, en cualquier DBMS), existen dos maneras de hacerlo:</span><span style="font-family: arial, helvetica, sans-serif;"></span></p>
+<ul>
+<li><span style="font-family: arial, helvetica, sans-serif;">Por modo gráfico: Donde se utilizan las opciones del DBMS a través del mouse.</span></li>
+<li><span style="font-family: arial, helvetica, sans-serif;">Por modo comando: Donde se deben digitar y ejecutar los comandos necesarios.</span></li>
+</ul>
+<p><span style="font-family: arial, helvetica, sans-serif;">Vamos a mostrar, a continuación, la creación y el borrado de bases de datos realizada por medio de ambos ambientes.</span></p>
+<table border="1" style="width: 101.018%;" height="265">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">Para crear una base de datos, por modo gráfico, le damos clic derecho a "Databases", y en el menú emergente que aparece escogemos la opción "New Database".</span></td>
+<td style="width: 64.3852%;"><img src="CREARBDGRAPH.jpg" alt="BDGRAPH" width="1366" height="768" /></td>
+</tr>
+</tbody>
+</table>
+<table border="1" style="width: 100.905%; height: 249px;">
+<tbody>
+<tr style="height: 249px;">
+<td style="width: 50%; text-align: justify; height: 249px;"><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">En la ventana que aparece, digitamos el nombre de la base de datos que vamos a crear, y presionamos en botón OK.</span></td>
+<td style="width: 50.9045%; height: 249px;"><img src="BDVENTANA.jpg" alt="WINDOW" width="1366" height="768" /></td>
+</tr>
+</tbody>
+</table>
+<table border="1" style="width: 100.804%; height: 242px;">
+<tbody>
+<tr style="height: 242px;">
+<td style="width: 50%; text-align: justify; height: 242px;"><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">Luego de esto, debemos refrescar la página de SQL Server para que en la lista de bases de datos, aparezca la nueva base de datos.</span></td>
+<td style="width: 50.804%; height: 242px;"><img src="BDCREADA.jpg" alt="CREATE" width="1366" height="768" /></td>
+</tr>
+</tbody>
+</table>
+<p>Ahora, vamos a explicar el borrado de bases de datos por modo gráfico. Vamos a borrar la base de datos recién creada.</p>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">Se le da clic derecho a la base de datos que se va a borrar. En el menú emergente, se selecciona la opción "Delete".</span></td>
+<td style="width: 50%;"><img src="BORRARBD.png" alt="BORRARBD" width="1366" height="768" /></td>
+</tr>
+</tbody>
+</table>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%;">
+<p style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">Aparece una ventana, donde se debe confirmar si se va a borrar la base de datos. Esto se hace dándole clic al botón "OK".</span></p>
+<p style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">Luego, damos clic al botón de refrescar y ya no debe aparecer la base de datos borrada en la lista de bases de datos existentes.</span></p>
+</td>
+<td style="width: 50%;"><img src="CONFIRMARBD.png" alt="CONFIRMARBD" width="1366" height="768" /></td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-family: arial, helvetica, sans-serif;">Cabe señalar dos cosas:</span></p>
+<ul>
+<li><span style="font-family: arial, helvetica, sans-serif;">Cuando se borra una base de datos, también se borra todo su contenido (tablas, datos, índices, vistas, etc.).</span></li>
+<li><span style="font-family: arial, helvetica, sans-serif;">Luego de borrar una base de datos, la única manera de recuperarla es a través de un backup.</span></li>
+</ul>
+<p><span style="font-family: arial, helvetica, sans-serif;">Ahora, procedamos a explicar cómo se crea una base de datos por modo comando.</span></p>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">Para abrir la ventana de comandos, se da clic en el botón "New Query", que está en la parte superior central de la pantalla.</span></td>
+<td style="width: 50%;"><img src="COMANDOS.png" alt="COMMAND" width="1366" height="768" /></td>
+</tr>
+</tbody>
+</table>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%;">
+<p style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">En la ventana de comandos, se digita la siguiente instrucción:</span></p>
+<p style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">       CREATE DATABASE &lt;nombre BD a crear&gt;</span></p>
+<p style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">Esta instrucción es DDL, es decir, Data Definition Language, lo cual quiere decir que con dicha instrucción se está afectando una estructura de datos.</span></p>
+<p style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">Para ejecutar algún comando que está en la ventana de comandos, se selecciona con el mouse y se le da clic al botón "Execute".</span></p>
+</td>
+<td style="width: 50%;"><img src="COMANDOSC.png" alt="COMAMND" width="1366" height="768" /></td>
+</tr>
+</tbody>
+</table>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%;">
+<p style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">Al ejecutar el comando, se activa la ventana de resultados, donde el motor especifica si la ejecución fue exitosa o si, por el contrario, hubo un error. Si hay un error, el mensaje de error aparecerá en dicha ventana, resaltado en rojo. Para nuestro caso, el mensaje que aparece es "Commands completed successfully", lo cual quiere decir que el comando se ejecutó exitosamente, la base de datos fue creada.</span></p>
+<p style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">Para que la base de datos creada aparezca en la lista de bases de datos, se debe darle clic al botón de refrescar.</span></p>
+</td>
+<td style="width: 50%;"><img src="RESULTADOS.jpg" alt="RESULT" width="1366" height="768" /></td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">Para borrar una base de datos por modo comando, procedemos de la siguiente manera.</span></p>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%;">
+<p style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">En la ventana de comandos, se digita la siguiente instrucción:</span></p>
+<p style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">        DROP DATABASE  &lt;nombre BD a borrar&gt;</span></p>
+<p style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">Este comando es de tipo DDL, porque se está borrando una estructura de datos.</span></p>
+<p style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">Se selecciona el comando con el mouse y se le da clic al botón "Execute".</span></p>
+<p style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">Es importante que cuando se vaya a borrar una base de datos, no estar ubicado en ella. Para saber en qué base de datos se encuentra uno parado, existe la caja de texto indicada en la imagen, que dice en cuál base de datos nos encontramos.</span></p>
+<p style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">Para ver que la base de datos ya no está creada en la lista de bases de datos, se debe dar clic al botón de refrescar.</span></p>
+</td>
+<td style="width: 50%;"><img src="BORRAR.jpg" alt="DROP" width="1366" height="768" /></td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-family: arial, helvetica, sans-serif;"></span></p>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><a href="https://youtu.be/Ses6H58ySEQ">Crear Bases de Datos</a></td>
+<td style="width: 50%; text-align: center;"><a href="https://youtu.be/UuXnJh56PDE">Borrar Bases de Datos</a></td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: center;"></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="crud_en_sql_server.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="gestion_de_tablas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

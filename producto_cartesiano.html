@@ -1,0 +1,1527 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>PRODUCTO CARTESIANO | DESARROLLO DE BASES DE DATOS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="JORGE IVAN BEDOYA RESTREPO" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-60"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">DESARROLLO DE BASES DE DATOS</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">DESARROLLO DE BASES DE DATOS</a></li>
+   <li><a href="introduccion_a_sql_server.html" class="daddy">INTRODUCCION A SQL SERVER</a>
+   <ul class="other-section">
+      <li><a href="lenguaje_sql.html" class="no-ch">LENGUAJE SQL</a></li>
+      <li><a href="sql_vs_sql_server.html" class="no-ch">SQL VS SQL SERVER</a></li>
+      <li><a href="historia_de_sql_server.html" class="no-ch">HISTORIA DE SQL SERVER</a></li>
+      <li><a href="conectar_a_sql_server.html" class="no-ch">CONECTAR A SQL SERVER</a></li>
+      <li><a href="bases_de_datos_del_sistema.html" class="no-ch">BASES DE DATOS DEL SISTEMA</a></li>
+      <li><a href="gestion_de_backups.html" class="no-ch">GESTION DE BACKUPS</a></li>
+   </ul>
+   </li>
+   <li><a href="crud_en_sql_server.html" class="daddy">CRUD EN SQL SERVER</a>
+   <ul class="other-section">
+      <li><a href="gestion_de_bases_de_datos.html" class="no-ch">GESTION DE BASES DE DATOS</a></li>
+      <li><a href="gestion_de_tablas.html" class="no-ch">GESTION DE TABLAS</a></li>
+      <li><a href="campos_tipo_identity.html" class="no-ch">CAMPOS TIPO IDENTITY</a></li>
+      <li><a href="insercion_de_datos.html" class="no-ch">INSERCION DE DATOS</a></li>
+      <li><a href="actualizacion_de_datos.html" class="no-ch">ACTUALIZACION DE DATOS</a></li>
+      <li><a href="borrado_de_datos.html" class="no-ch">BORRADO DE DATOS</a></li>
+   </ul>
+   </li>
+   <li><a href="consulta_de_datos.html" class="daddy">CONSULTA DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="consultas_bsicas.html" class="no-ch">CONSULTAS BÁSICAS</a></li>
+      <li><a href="clusulas_and_or_between_in_like.html" class="no-ch">CLÁUSULAS AND, OR, BETWEEN, IN, LIKE</a></li>
+      <li><a href="cualificacin_de_atributos.html" class="no-ch">CUALIFICACIÓN DE ATRIBUTOS</a></li>
+      <li><a href="funciones_agregadas.html" class="no-ch">FUNCIONES AGREGADAS</a></li>
+      <li><a href="ttulos_a_columnas_del_resultado.html" class="no-ch">TÍTULOS A COLUMNAS DEL RESULTADO</a></li>
+      <li><a href="clusulas_lower_y_upper.html" class="no-ch">CLÁUSULAS LOWER Y UPPER</a></li>
+      <li><a href="clusulas_day_month_year_substring.html" class="no-ch">CLÁUSULAS DAY, MONTH, YEAR, SUBSTRING</a></li>
+      <li><a href="order_by__asc__desc.html" class="no-ch">ORDER BY ... ASC / DESC</a></li>
+      <li><a href="clausula_top.html" class="no-ch">CLAUSULA TOP</a></li>
+      <li><a href="subconsultas.html" class="no-ch">SUBCONSULTAS</a></li>
+      <li><a href="clausula_group_by__having.html" class="no-ch">CLAUSULA GROUP BY / HAVING</a></li>
+      <li><a href="clausulas_any_y_all.html" class="no-ch">CLAUSULAS ANY Y ALL</a></li>
+   </ul>
+   </li>
+   <li><a href="relacion_entre_tablas.html" class="daddy">RELACION ENTRE TABLAS</a>
+   <ul class="other-section">
+      <li><a href="cmo_se_relacionan_tablas.html" class="no-ch">CÓMO SE RELACIONAN TABLAS?</a></li>
+      <li><a href="diagrama_de_la_base_de_datos.html" class="no-ch">DIAGRAMA DE LA BASE DE DATOS</a></li>
+      <li><a href="integridad_referencial.html" class="no-ch">INTEGRIDAD REFERENCIAL</a></li>
+   </ul>
+   </li>
+   <li><a href="joins.html" class="daddy">JOINS</a>
+   <ul class="other-section">
+      <li><a href="concepto_de_join.html" class="no-ch">CONCEPTO DE JOIN</a></li>
+      <li><a href="tipos_de_joins.html" class="daddy">TIPOS DE JOINS</a>
+      <ul class="other-section">
+         <li><a href="inner_join.html" class="no-ch">INNER JOIN</a></li>
+         <li><a href="left__right__full_join.html" class="no-ch">LEFT / RIGHT / FULL JOIN</a></li>
+      </ul>
+      </li>
+      <li><a href="joins_de_mas_de_dos_tablas.html" class="no-ch">JOINS DE MAS DE DOS TABLAS</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="algebra_relacional.html" class="current-page-parent daddy">ALGEBRA RELACIONAL</a>
+   <ul>
+      <li><a href="introduccionque_es.html" class="no-ch">INTRODUCCION.....QUE ES?</a></li>
+      <li><a href="tipos_de_operaciones.html" class="no-ch">TIPOS DE OPERACIONES</a></li>
+      <li class="current-page-parent"><a href="operaciones.html" class="current-page-parent daddy">OPERACIONES</a>
+      <ul>
+         <li class="current-page-parent"><a href="primarias.html" class="current-page-parent daddy">PRIMARIAS</a>
+         <ul>
+            <li><a href="seleccion.html" class="no-ch">SELECCION</a></li>
+            <li><a href="proyeccion.html" class="no-ch">PROYECCION</a></li>
+            <li><a href="renombramiento.html" class="no-ch">RENOMBRAMIENTO</a></li>
+            <li><a href="union.html" class="no-ch">UNION</a></li>
+            <li><a href="diferencia.html" class="no-ch">DIFERENCIA</a></li>
+            <li id="active"><a href="producto_cartesiano.html" class="active no-ch">PRODUCTO CARTESIANO</a></li>
+         </ul>
+         </li>
+         <li><a href="secundarias.html" class="daddy">SECUNDARIAS</a>
+         <ul class="other-section">
+            <li><a href="reunion_natural.html" class="no-ch">REUNION NATURAL</a></li>
+            <li><a href="interseccion.html" class="no-ch">INTERSECCION</a></li>
+            <li><a href="division.html" class="no-ch">DIVISION</a></li>
+         </ul>
+         </li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="vistas.html" class="no-ch">VISTAS</a></li>
+   <li><a href="calcular_atributos_derivados.html" class="no-ch">CALCULAR ATRIBUTOS DERIVADOS</a></li>
+   <li><a href="check_constraints.html" class="no-ch">CHECK CONSTRAINTS</a></li>
+   <li><a href="programacion_de_bases_de_datos.html" class="daddy">PROGRAMACION DE BASES DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="procedimientos_almacenados.html" class="no-ch">PROCEDIMIENTOS ALMACENADOS</a></li>
+      <li><a href="funciones_de_usuario.html" class="daddy">FUNCIONES DE USUARIO</a>
+      <ul class="other-section">
+         <li><a href="funciones_escalares.html" class="no-ch">FUNCIONES ESCALARES</a></li>
+         <li><a href="funciones_de_tablas.html" class="no-ch">FUNCIONES DE TABLAS</a></li>
+      </ul>
+      </li>
+      <li><a href="triggers.html" class="no-ch">TRIGGERS</a></li>
+      <li><a href="control_de_errores.html" class="no-ch">CONTROL DE ERRORES</a></li>
+      <li><a href="transacciones__atomicidad.html" class="no-ch">TRANSACCIONES / ATOMICIDAD</a></li>
+      <li><a href="manejo_de_cursores.html" class="no-ch">MANEJO DE CURSORES</a></li>
+   </ul>
+   </li>
+   <li><a href="temas_adicionales.html" class="daddy">TEMAS ADICIONALES</a>
+   <ul class="other-section">
+      <li><a href="encriptamiento_de_datos.html" class="no-ch">ENCRIPTAMIENTO DE DATOS</a></li>
+      <li><a href="clusula_case.html" class="no-ch">CLÁUSULA CASE</a></li>
+      <li><a href="inserts_con_datos_de_otras_tablas.html" class="no-ch">INSERTs CON DATOS DE OTRAS TABLAS</a></li>
+      <li><a href="manejo_de_nulos.html" class="no-ch">MANEJO DE NULOS</a></li>
+      <li><a href="truncate_vs_delete_vs_drop.html" class="no-ch">TRUNCATE vs DELETE vs DROP</a></li>
+      <li><a href="merge.html" class="no-ch">MERGE</a></li>
+      <li><a href="otros_comodines_del_like.html" class="no-ch">OTROS COMODINES DEL LIKE</a></li>
+      <li><a href="funciones_numricas.html" class="no-ch">FUNCIONES NUMÉRICAS</a></li>
+      <li><a href="funciones_tipo_fecha.html" class="no-ch">FUNCIONES TIPO FECHA</a></li>
+      <li><a href="funciones_tipo_string.html" class="no-ch">FUNCIONES TIPO STRING</a></li>
+      <li><a href="clausula_default.html" class="no-ch">CLAUSULA DEFAULT</a></li>
+      <li><a href="clausula_distinct.html" class="no-ch">CLAUSULA DISTINCT</a></li>
+      <li><a href="borrado__actualizacion_en_cascada.html" class="no-ch">BORRADO / ACTUALIZACION EN CASCADA</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="diferencia.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="secundarias.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">PRODUCTO CARTESIANO</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id67">
+<div class="iDevice emphasis0" >
+<div id="ta67_118_2" class="block iDevice_content">
+<div class="exe-text"><p><strong>Operación Producto Cartesiano</strong></p>
+<p>Tipo: Binaria</p>
+<p>Sintaxis:</p>
+<p>        Tabla1  X  Tabla2</p>
+<p>Descripción: Concatena cada una de las tuplas de Tabla1 con cada una de las tuplas de Tabla2, una a una. Para entender mejor esta operación, suponga la siguiente situación expresada:</p>
+<p>Tabla1: Tiene 10 tuplas y 8 atributos.</p>
+<p>Tabla2: Tiene 7 tuplas y 9 atributos.</p>
+<p>Entonces, </p>
+<p>Tabla1  X Tabla2  tiene 70 tuplas y cada tupla tendrá 17 atributos.</p>
+<p> Ejemplo: Suponga las siguientes dos tablas:</p>
+<table border="1" style="width: 20%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><strong>Avión</strong></td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>Matrícula     PK</p>
+<p>Marca</p>
+<p>No.horasvuelo</p>
+<p>Codigo-aerolinea</p>
+</td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>FK: Codigo-aerolinea referencia a Aerolinea(codigo)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<table border="1" style="width: 20.804%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><strong>Aerolinea</strong></td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>Codigo</p>
+<p>Nombre</p>
+<p>AñoFundacion</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Y los datos de ambas tablas son los siguientes:</p>
+<p>Tabla Avión</p>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 25%; text-align: center;"><strong>Matrícula</strong></td>
+<td style="width: 25%; text-align: center;"><strong>Marca</strong></td>
+<td style="width: 25%; text-align: center;"><strong>No.horasvuelo</strong></td>
+<td style="width: 25%; text-align: center;"><strong>Codigo-aerolinea</strong></td>
+</tr>
+<tr>
+<td width="136" style="width: 25%;">
+<p>HK7800</p>
+</td>
+<td width="107" style="width: 25%;">
+<p>Boeing</p>
+</td>
+<td width="132" style="width: 25%;">
+<p>520</p>
+</td>
+<td width="167" style="width: 25%;">
+<p>10</p>
+</td>
+</tr>
+<tr>
+<td width="136" style="width: 25%;">
+<p>HK8000</p>
+</td>
+<td width="107" style="width: 25%;">
+<p>Airbus</p>
+</td>
+<td width="132" style="width: 25%;">
+<p>410</p>
+</td>
+<td width="167" style="width: 25%;">
+<p>10</p>
+</td>
+</tr>
+<tr>
+<td width="136" style="width: 25%;">
+<p>HK2300</p>
+</td>
+<td width="107" style="width: 25%;">
+<p>Concorde</p>
+</td>
+<td width="132" style="width: 25%;">
+<p>215</p>
+</td>
+<td width="167" style="width: 25%;">
+<p>20</p>
+</td>
+</tr>
+<tr>
+<td width="136" style="width: 25%;">
+<p>HK7400</p>
+</td>
+<td width="107" style="width: 25%;">
+<p>Boeing</p>
+</td>
+<td width="132" style="width: 25%;">
+<p>500</p>
+</td>
+<td width="167" style="width: 25%;">
+<p>30</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Tabla Aerolínea</p>
+<table border="1" style="width: 99.9999%;">
+<tbody>
+<tr>
+<td style="width: 33.3333%; text-align: center;"><strong>Código</strong></td>
+<td style="width: 33.3333%; text-align: center;"><strong>Nombre</strong></td>
+<td style="width: 33.3333%; text-align: center;"><strong>AñoFundación</strong></td>
+</tr>
+<tr>
+<td width="181" style="width: 33.3333%;">
+<p>10</p>
+</td>
+<td width="181" style="width: 33.3333%;">
+<p>Avianca</p>
+</td>
+<td width="181" style="width: 33.3333%;">
+<p>1950</p>
+</td>
+</tr>
+<tr>
+<td width="181" style="width: 33.3333%;">
+<p>20</p>
+</td>
+<td width="181" style="width: 33.3333%;">
+<p>Copa</p>
+</td>
+<td width="181" style="width: 33.3333%;">
+<p>1966</p>
+</td>
+</tr>
+<tr>
+<td width="181" style="width: 33.3333%;">
+<p>30</p>
+</td>
+<td width="181" style="width: 33.3333%;">
+<p>Satena</p>
+</td>
+<td width="181" style="width: 33.3333%;">
+<p>1945</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Entonces el resultado de Avión  X Aerolínea es el siguiente:</p>
+<table border="1" style="width: 99.9999%;">
+<tbody>
+<tr>
+<td style="width: 14.2857%; text-align: center;"><strong>Matrícula</strong></td>
+<td style="width: 14.2857%; text-align: center;"><strong>Marca</strong></td>
+<td style="width: 14.2857%; text-align: center;"><strong>No.horasvuelo</strong></td>
+<td style="width: 14.2857%; text-align: center;"><strong>Codigo-aerolinea</strong></td>
+<td style="width: 14.2857%; text-align: center;"><strong>Código</strong></td>
+<td style="width: 14.2857%; text-align: center;"><strong>Nombre</strong></td>
+<td style="width: 14.2857%; text-align: center;"><strong>AñoFundación</strong></td>
+</tr>
+<tr>
+<td width="76" style="width: 14.2857%;">
+<p>HK7800</p>
+</td>
+<td width="84" style="width: 14.2857%;">
+<p>Boeing</p>
+</td>
+<td width="83" style="width: 14.2857%;">
+<p>520</p>
+</td>
+<td width="85" style="width: 14.2857%;">
+<p>10</p>
+</td>
+<td width="62" style="width: 14.2857%;">
+<p>10</p>
+</td>
+<td width="76" style="width: 14.2857%;">
+<p>Avianca</p>
+</td>
+<td width="77" style="width: 14.2857%;">
+<p>1950</p>
+</td>
+</tr>
+<tr>
+<td width="76" style="width: 14.2857%;">
+<p>HK7800</p>
+</td>
+<td width="84" style="width: 14.2857%;">
+<p>Boeing</p>
+</td>
+<td width="83" style="width: 14.2857%;">
+<p>520</p>
+</td>
+<td width="85" style="width: 14.2857%;">
+<p>10</p>
+</td>
+<td width="62" style="width: 14.2857%;">
+<p>20</p>
+</td>
+<td width="76" style="width: 14.2857%;">
+<p>Copa</p>
+</td>
+<td width="77" style="width: 14.2857%;">
+<p>1966</p>
+</td>
+</tr>
+<tr>
+<td width="76" style="width: 14.2857%;">
+<p>HK7800</p>
+</td>
+<td width="84" style="width: 14.2857%;">
+<p>Boeing</p>
+</td>
+<td width="83" style="width: 14.2857%;">
+<p>520</p>
+</td>
+<td width="85" style="width: 14.2857%;">
+<p>10</p>
+</td>
+<td width="62" style="width: 14.2857%;">
+<p>30</p>
+</td>
+<td width="76" style="width: 14.2857%;">
+<p>Satena</p>
+</td>
+<td width="77" style="width: 14.2857%;">
+<p>1945</p>
+</td>
+</tr>
+<tr>
+<td width="76" style="width: 14.2857%;">
+<p>HK8000</p>
+</td>
+<td width="84" style="width: 14.2857%;">
+<p>Airbus</p>
+</td>
+<td width="83" style="width: 14.2857%;">
+<p>410</p>
+</td>
+<td width="85" style="width: 14.2857%;">
+<p>10</p>
+</td>
+<td width="62" style="width: 14.2857%;">
+<p>10</p>
+</td>
+<td width="76" style="width: 14.2857%;">
+<p>Avianca</p>
+</td>
+<td width="77" style="width: 14.2857%;">
+<p>1950</p>
+</td>
+</tr>
+<tr>
+<td width="76" style="width: 14.2857%;">
+<p>HK8000</p>
+</td>
+<td width="84" style="width: 14.2857%;">
+<p>Airbus</p>
+</td>
+<td width="83" style="width: 14.2857%;">
+<p>410</p>
+</td>
+<td width="85" style="width: 14.2857%;">
+<p>10</p>
+</td>
+<td width="62" style="width: 14.2857%;">
+<p>20</p>
+</td>
+<td width="76" style="width: 14.2857%;">
+<p>Copa</p>
+</td>
+<td width="77" style="width: 14.2857%;">
+<p>1966</p>
+</td>
+</tr>
+<tr>
+<td width="76" style="width: 14.2857%;">
+<p>HK8000</p>
+</td>
+<td width="84" style="width: 14.2857%;">
+<p>Airbus</p>
+</td>
+<td width="83" style="width: 14.2857%;">
+<p>410</p>
+</td>
+<td width="85" style="width: 14.2857%;">
+<p>10</p>
+</td>
+<td width="62" style="width: 14.2857%;">
+<p>30</p>
+</td>
+<td width="76" style="width: 14.2857%;">
+<p>Satena</p>
+</td>
+<td width="77" style="width: 14.2857%;">
+<p>1945</p>
+</td>
+</tr>
+<tr>
+<td width="76" style="width: 14.2857%;">
+<p>HK2300</p>
+</td>
+<td width="84" style="width: 14.2857%;">
+<p>Concorde</p>
+</td>
+<td width="83" style="width: 14.2857%;">
+<p>215</p>
+</td>
+<td width="85" style="width: 14.2857%;">
+<p>20</p>
+</td>
+<td width="62" style="width: 14.2857%;">
+<p>10</p>
+</td>
+<td width="76" style="width: 14.2857%;">
+<p>Avianca</p>
+</td>
+<td width="77" style="width: 14.2857%;">
+<p>1950</p>
+</td>
+</tr>
+<tr>
+<td width="76" style="width: 14.2857%;">
+<p>HK2300</p>
+</td>
+<td width="84" style="width: 14.2857%;">
+<p>Concorde</p>
+</td>
+<td width="83" style="width: 14.2857%;">
+<p>215</p>
+</td>
+<td width="85" style="width: 14.2857%;">
+<p>20</p>
+</td>
+<td width="62" style="width: 14.2857%;">
+<p>20</p>
+</td>
+<td width="76" style="width: 14.2857%;">
+<p>Copa</p>
+</td>
+<td width="77" style="width: 14.2857%;">
+<p>1966</p>
+</td>
+</tr>
+<tr>
+<td width="76" style="width: 14.2857%;">
+<p>HK2300</p>
+</td>
+<td width="84" style="width: 14.2857%;">
+<p>Concorde</p>
+</td>
+<td width="83" style="width: 14.2857%;">
+<p>215</p>
+</td>
+<td width="85" style="width: 14.2857%;">
+<p>20</p>
+</td>
+<td width="62" style="width: 14.2857%;">
+<p>30</p>
+</td>
+<td width="76" style="width: 14.2857%;">
+<p>Satena</p>
+</td>
+<td width="77" style="width: 14.2857%;">
+<p>1945</p>
+</td>
+</tr>
+<tr>
+<td width="76" style="width: 14.2857%;">
+<p>HK7400</p>
+</td>
+<td width="84" style="width: 14.2857%;">
+<p>Boeing</p>
+</td>
+<td width="83" style="width: 14.2857%;">
+<p>500</p>
+</td>
+<td width="85" style="width: 14.2857%;">
+<p>30</p>
+</td>
+<td width="62" style="width: 14.2857%;">
+<p>10</p>
+</td>
+<td width="76" style="width: 14.2857%;">
+<p>Avianca</p>
+</td>
+<td width="77" style="width: 14.2857%;">
+<p>1950</p>
+</td>
+</tr>
+<tr>
+<td width="76" style="width: 14.2857%;">
+<p>HK7400</p>
+</td>
+<td width="84" style="width: 14.2857%;">
+<p>Boeing</p>
+</td>
+<td width="83" style="width: 14.2857%;">
+<p>500</p>
+</td>
+<td width="85" style="width: 14.2857%;">
+<p>30</p>
+</td>
+<td width="62" style="width: 14.2857%;">
+<p>20</p>
+</td>
+<td width="76" style="width: 14.2857%;">
+<p>Copa</p>
+</td>
+<td width="77" style="width: 14.2857%;">
+<p>1966</p>
+</td>
+</tr>
+<tr>
+<td width="76" style="width: 14.2857%;">
+<p>HK7400</p>
+</td>
+<td width="84" style="width: 14.2857%;">
+<p>Boeing</p>
+</td>
+<td width="83" style="width: 14.2857%;">
+<p>500</p>
+</td>
+<td width="85" style="width: 14.2857%;">
+<p>30</p>
+</td>
+<td width="62" style="width: 14.2857%;">
+<p>30</p>
+</td>
+<td width="76" style="width: 14.2857%;">
+<p>Satena</p>
+</td>
+<td width="77" style="width: 14.2857%;">
+<p>1945</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-size: 1.05em;">A cualquier par de tablas se les puede hacer un producto cartesiano. Lo que sucede es que hay ocasiones en las cuales el resultado no tiene sentido.</span> </p>
+<p>Ejemplo: Listar la matrícula y marca de cada avión junto con el nombre de la aerolínea a la cual pertenecen.</p>
+<p>Para solucionar esto en SQL, se sabe que se ejecuta la siguiente instrucción:</p>
+<p>SELECT av.matricula, av.marca, ae.nombre</p>
+<p>FROM  Avion av  INNER JOIN  Aerolínea ae</p>
+<p>ON av.codigo-aerolinea = ae.codigo</p>
+<p>Si se analiza el producto cartesiano entre Avión y Aerolínea, el resultado son 12 tuplas, de las cuales 8 son tuplas espurias y 4 son tuplas verdaderas. Cuáles son las 8 tuplas espurias y cuáles son las 4 verdaderas?</p>
+<p>Entonces, para hacer la anterior consulta en álgebra relacional, la operación es la siguiente:</p>
+<p>         Π <sub><span>matricula, marca, nombre</span></sub><span> (Ϭ</span> <sub>código-aerolinea = codigo</sub>(Avión  X  Aerolínea))</p>
+<p>Primero se hace el producto cartesiano, el cual da como resultado 12 tuplas. Luego se hace la selección, la cual selecciona las 4 tuplas reales y de estas 4 tuplas se proyectan los atributos a imprimir.</p>
+<p>Como conclusión a este ejemplo, se puede afirmar que todo INNER JOIN es hecho a través de un producto cartesiano.</p>
+<p>Ejemplo: Listar el número de horas de vuelo del avión que MÁS horas de vuelo tiene.</p>
+<p>Hacer esto en SQL es muy sencillo:</p>
+<p>SELECT max(No.horasvuelo)</p>
+<p>FROM Avión</p>
+<p>La explicación siguiente muestra cómo se llevaría a cabo esta instrucción en álgebra relacional.</p>
+<p>Para uno saber cuál es el máximo número de horas de vuelo, se deben comparar TODOS los números de horas de vuelo. Eso está disponible en la tabla AVION, pero cada No.horasvuelo está en una tupla distinta, lo cual se constituye en un problema ya que no se tiene una operación que compare valores de un mismo campo en tuplas distintas.</p>
+<p>El problema se solucionaría si tuviéramos el par de valores a comparar del atributo No.horasvuelo en la misma tupla. Como se logra esto?</p>
+<p>Si se hace un producto cartesiano entre la tabla Avión consigo misma, cada tupla tendría dos No.horasvuelo y se tendría todas las parejas que habría que comparar. El producto cartesiano mencionado se muestra a continuación.</p>
+<p>Avion  X  Avion</p>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 12.5%; text-align: center;"><strong>Matricula</strong></td>
+<td style="width: 12.5%; text-align: center;"><strong>Marca</strong></td>
+<td style="width: 12.5%; text-align: center;"><strong>No.horasvuelo</strong></td>
+<td style="width: 12.5%; text-align: center;"><strong>Codigo-aerolinea</strong></td>
+<td style="width: 12.5%; text-align: center;"><strong>Matricula</strong></td>
+<td style="width: 12.5%; text-align: center;"><strong>Marca</strong></td>
+<td style="width: 12.5%; text-align: center;"><strong>No.horasvuelo</strong></td>
+<td style="width: 12.5%; text-align: center;"><strong>Codigo-aerolinea</strong></td>
+</tr>
+<tr>
+<td width="66" style="width: 12.5%;">
+<p>HK7800</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>Boeing</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>520</p>
+</td>
+<td width="65" style="width: 12.5%;">
+<p>10</p>
+</td>
+<td width="66" style="width: 12.5%;">
+<p>HK7800</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>Boeing</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>520</p>
+</td>
+<td width="65" style="width: 12.5%;">
+<p>10</p>
+</td>
+</tr>
+<tr>
+<td width="66" style="width: 12.5%;">
+<p>HK7800</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>Boeing</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>520</p>
+</td>
+<td width="65" style="width: 12.5%;">
+<p>10</p>
+</td>
+<td width="66" style="width: 12.5%;">
+<p>HK8000</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>Airbus</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>410</p>
+</td>
+<td width="65" style="width: 12.5%;">
+<p>10</p>
+</td>
+</tr>
+<tr>
+<td width="66" style="width: 12.5%;">
+<p>HK7800</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>Boeing</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>520</p>
+</td>
+<td width="65" style="width: 12.5%;">
+<p>10</p>
+</td>
+<td width="66" style="width: 12.5%;">
+<p>HK2300</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>Concorde</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>215</p>
+</td>
+<td width="65" style="width: 12.5%;">
+<p>20</p>
+</td>
+</tr>
+<tr>
+<td width="66" style="width: 12.5%;">
+<p>HK7800</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>Boeing</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>520</p>
+</td>
+<td width="65" style="width: 12.5%;">
+<p>10</p>
+</td>
+<td width="66" style="width: 12.5%;">
+<p>HK7400</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>Boeing</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>500</p>
+</td>
+<td width="65" style="width: 12.5%;">
+<p>30</p>
+</td>
+</tr>
+<tr>
+<td width="66" style="width: 12.5%;">
+<p>HK8000</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>Airbus</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>410</p>
+</td>
+<td width="65" style="width: 12.5%;">
+<p>10</p>
+</td>
+<td width="66" style="width: 12.5%;">
+<p>HK7800</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>Boeing</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>520</p>
+</td>
+<td width="65" style="width: 12.5%;">
+<p>10</p>
+</td>
+</tr>
+<tr>
+<td width="66" style="width: 12.5%;">
+<p>HK8000</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>Airbus</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>410</p>
+</td>
+<td width="65" style="width: 12.5%;">
+<p>10</p>
+</td>
+<td width="66" style="width: 12.5%;">
+<p>HK8000</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>Airbus</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>410</p>
+</td>
+<td width="65" style="width: 12.5%;">
+<p>10</p>
+</td>
+</tr>
+<tr>
+<td width="66" style="width: 12.5%;">
+<p>HK8000</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>Airbus</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>410</p>
+</td>
+<td width="65" style="width: 12.5%;">
+<p>10</p>
+</td>
+<td width="66" style="width: 12.5%;">
+<p>HK2300</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>Concorde</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>215</p>
+</td>
+<td width="65" style="width: 12.5%;">
+<p>20</p>
+</td>
+</tr>
+<tr>
+<td width="66" style="width: 12.5%;">
+<p>HK8000</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>Airbus</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>410</p>
+</td>
+<td width="65" style="width: 12.5%;">
+<p>10</p>
+</td>
+<td width="66" style="width: 12.5%;">
+<p>HK7400</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>Boeing</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>500</p>
+</td>
+<td width="65" style="width: 12.5%;">
+<p>30</p>
+</td>
+</tr>
+<tr>
+<td width="66" style="width: 12.5%;">
+<p>HK2300</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>Concorde</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>215</p>
+</td>
+<td width="65" style="width: 12.5%;">
+<p>20</p>
+</td>
+<td width="66" style="width: 12.5%;">
+<p>HK7800</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>Boeing</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>520</p>
+</td>
+<td width="65" style="width: 12.5%;">
+<p>10</p>
+</td>
+</tr>
+<tr>
+<td width="66" style="width: 12.5%;">
+<p>HK2300</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>Concorde</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>215</p>
+</td>
+<td width="65" style="width: 12.5%;">
+<p>20</p>
+</td>
+<td width="66" style="width: 12.5%;">
+<p>HK8000</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>Airbus</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>410</p>
+</td>
+<td width="65" style="width: 12.5%;">
+<p>10</p>
+</td>
+</tr>
+<tr>
+<td width="66" style="width: 12.5%;">
+<p>HK2300</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>Concorde</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>215</p>
+</td>
+<td width="65" style="width: 12.5%;">
+<p>20</p>
+</td>
+<td width="66" style="width: 12.5%;">
+<p>HK2300</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>Concorde</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>215</p>
+</td>
+<td width="65" style="width: 12.5%;">
+<p>20</p>
+</td>
+</tr>
+<tr>
+<td width="66" style="width: 12.5%;">
+<p>HK2300</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>Concorde</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>215</p>
+</td>
+<td width="65" style="width: 12.5%;">
+<p>20</p>
+</td>
+<td width="66" style="width: 12.5%;">
+<p>HK7400</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>Boeing</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>500</p>
+</td>
+<td width="65" style="width: 12.5%;">
+<p>30</p>
+</td>
+</tr>
+<tr>
+<td width="66" style="width: 12.5%;">
+<p>HK7400</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>Boeing</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>500</p>
+</td>
+<td width="65" style="width: 12.5%;">
+<p>30</p>
+</td>
+<td width="66" style="width: 12.5%;">
+<p>HK7800</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>Boeing</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>520</p>
+</td>
+<td width="65" style="width: 12.5%;">
+<p>10</p>
+</td>
+</tr>
+<tr>
+<td width="66" style="width: 12.5%;">
+<p>HK7400</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>Boeing</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>500</p>
+</td>
+<td width="65" style="width: 12.5%;">
+<p>30</p>
+</td>
+<td width="66" style="width: 12.5%;">
+<p>HK8000</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>Airbus</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>410</p>
+</td>
+<td width="65" style="width: 12.5%;">
+<p>10</p>
+</td>
+</tr>
+<tr>
+<td width="66" style="width: 12.5%;">
+<p>HK7400</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>Boeing</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>500</p>
+</td>
+<td width="65" style="width: 12.5%;">
+<p>30</p>
+</td>
+<td width="66" style="width: 12.5%;">
+<p>HK2300</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>Concorde</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>215</p>
+</td>
+<td width="65" style="width: 12.5%;">
+<p>20</p>
+</td>
+</tr>
+<tr>
+<td width="66" style="width: 12.5%;">
+<p>HK7400</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>Boeing</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>500</p>
+</td>
+<td width="65" style="width: 12.5%;">
+<p>30</p>
+</td>
+<td width="66" style="width: 12.5%;">
+<p>HK7400</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>Boeing</p>
+</td>
+<td width="70" style="width: 12.5%;">
+<p>500</p>
+</td>
+<td width="65" style="width: 12.5%;">
+<p>30</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Lo que sigue es empezar a comparar cada par de valores del campo No.horasvuelo que hay en cada tupla. Pero surge un nuevo problema: en Avión X Avión, en cada tupla hay dos atributos llamados No.horasvuelo, por lo tanto, si necesitamos comparar ese par de valores hay que diferenciar, de alguna manera, los nombres de los atributos.</p>
+<p>Es ahí donde entra a funcionar la operación de renombramiento. Si al hacer la operación de Avión  X Avión, se renombra alguna de las dos “tablas” (Avión de la izquierda del producto o Avión de la derecha del producto), ya habría alguna manera de identificar los dos atributos No.horasvuelo.</p>
+<p>Por lo tanto, con la explicación dada hasta el momento, tenemos la siguiente expresión del álgebra:</p>
+<p>       Avión  X  ρ<sub> Av</sub>  (Avión)</p>
+<p>lo cual da como resultado la tabla anterior.</p>
+<p>El mecanismo para lograr la consulta requerida es la siguiente:</p>
+<p><img src="RESTA.jpg" alt="RESTA" width="746" height="389" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: center;"><span style="font-size: 8pt;">Fuente Propia.</span></p>
+<p>Entonces,</p>
+<p>       A =  Π<sub> No.horasvuelo</sub> (Avión)</p>
+<p>       C = Ϭ <sub>Avion.No.horasvuelo &lt; Av.No.horasvuelo</sub> (Avión  X  ρ<sub> Av</sub>  (Avión))</p>
+<p>       B = Π<sub> Avion.No.horasvuelo</sub> (C)</p>
+<p>Las tuplas seleccionadas en C se muestran resaltadas en amarillo.</p>
+<p> Avion  X  Avion</p>
+<table border="1" style="width: 100%; height: 794px;">
+<tbody>
+<tr style="height: 42px;">
+<td style="width: 12.5%; text-align: center; height: 42px;"><strong>Matricula</strong></td>
+<td style="width: 12.5%; text-align: center; height: 42px;"><strong>Marca</strong></td>
+<td style="width: 12.5%; text-align: center; height: 42px;"><strong>No.horasvuelo</strong></td>
+<td style="width: 12.5%; text-align: center; height: 42px;"><strong>Codigo-aerolinea</strong></td>
+<td style="width: 12.5%; text-align: center; height: 42px;"><strong>Matricula</strong></td>
+<td style="width: 12.5%; text-align: center; height: 42px;"><strong>Marca</strong></td>
+<td style="width: 12.5%; text-align: center; height: 42px;"><strong>No.horasvuelo</strong></td>
+<td style="width: 12.5%; text-align: center; height: 42px;"><strong>Codigo-aerolinea</strong></td>
+</tr>
+<tr style="height: 47px;">
+<td width="66" style="width: 12.5%; height: 47px;">
+<p>HK7800</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>Boeing</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>520</p>
+</td>
+<td width="65" style="width: 12.5%; height: 47px;">
+<p>10</p>
+</td>
+<td width="66" style="width: 12.5%; height: 47px;">
+<p>HK7800</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>Boeing</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>520</p>
+</td>
+<td width="65" style="width: 12.5%; height: 47px;">
+<p>10</p>
+</td>
+</tr>
+<tr style="height: 47px;">
+<td width="66" style="width: 12.5%; height: 47px;">
+<p>HK7800</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>Boeing</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>520</p>
+</td>
+<td width="65" style="width: 12.5%; height: 47px;">
+<p>10</p>
+</td>
+<td width="66" style="width: 12.5%; height: 47px;">
+<p>HK8000</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>Airbus</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>410</p>
+</td>
+<td width="65" style="width: 12.5%; height: 47px;">
+<p>10</p>
+</td>
+</tr>
+<tr style="height: 47px;">
+<td width="66" style="width: 12.5%; height: 47px;">
+<p>HK7800</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>Boeing</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>520</p>
+</td>
+<td width="65" style="width: 12.5%; height: 47px;">
+<p>10</p>
+</td>
+<td width="66" style="width: 12.5%; height: 47px;">
+<p>HK2300</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>Concorde</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>215</p>
+</td>
+<td width="65" style="width: 12.5%; height: 47px;">
+<p>20</p>
+</td>
+</tr>
+<tr style="height: 47px;">
+<td width="66" style="width: 12.5%; height: 47px;">
+<p>HK7800</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>Boeing</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>520</p>
+</td>
+<td width="65" style="width: 12.5%; height: 47px;">
+<p>10</p>
+</td>
+<td width="66" style="width: 12.5%; height: 47px;">
+<p>HK7400</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>Boeing</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>500</p>
+</td>
+<td width="65" style="width: 12.5%; height: 47px;">
+<p>30</p>
+</td>
+</tr>
+<tr style="height: 47px; background-color: #ffe900;">
+<td width="66" style="width: 12.5%; height: 47px;">
+<p>HK8000</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>Airbus</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>410</p>
+</td>
+<td width="65" style="width: 12.5%; height: 47px;">
+<p>10</p>
+</td>
+<td width="66" style="width: 12.5%; height: 47px;">
+<p>HK7800</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>Boeing</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>520</p>
+</td>
+<td width="65" style="width: 12.5%; height: 47px;">
+<p>10</p>
+</td>
+</tr>
+<tr style="height: 47px;">
+<td width="66" style="width: 12.5%; height: 47px;">
+<p>HK8000</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>Airbus</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>410</p>
+</td>
+<td width="65" style="width: 12.5%; height: 47px;">
+<p>10</p>
+</td>
+<td width="66" style="width: 12.5%; height: 47px;">
+<p>HK8000</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>Airbus</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>410</p>
+</td>
+<td width="65" style="width: 12.5%; height: 47px;">
+<p>10</p>
+</td>
+</tr>
+<tr style="height: 47px;">
+<td width="66" style="width: 12.5%; height: 47px;">
+<p>HK8000</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>Airbus</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>410</p>
+</td>
+<td width="65" style="width: 12.5%; height: 47px;">
+<p>10</p>
+</td>
+<td width="66" style="width: 12.5%; height: 47px;">
+<p>HK2300</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>Concorde</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>215</p>
+</td>
+<td width="65" style="width: 12.5%; height: 47px;">
+<p>20</p>
+</td>
+</tr>
+<tr style="background-color: #ffe900;">
+<td width="66" style="width: 12.5%; height: 47px;">
+<p>HK8000</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>Airbus</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>410</p>
+</td>
+<td width="65" style="width: 12.5%; height: 47px;">
+<p>10</p>
+</td>
+<td width="66" style="width: 12.5%; height: 47px;">
+<p>HK7400</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>Boeing</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>500</p>
+</td>
+<td width="65" style="width: 12.5%; height: 47px;">
+<p>30</p>
+</td>
+</tr>
+<tr style="background-color: #ffe900;">
+<td width="66" style="width: 12.5%; height: 47px;">
+<p>HK2300</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>Concorde</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>215</p>
+</td>
+<td width="65" style="width: 12.5%; height: 47px;">
+<p>20</p>
+</td>
+<td width="66" style="width: 12.5%; height: 47px;">
+<p>HK7800</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>Boeing</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>520</p>
+</td>
+<td width="65" style="width: 12.5%; height: 47px;">
+<p>10</p>
+</td>
+</tr>
+<tr style="background-color: #ffe900;">
+<td width="66" style="width: 12.5%; height: 47px;">
+<p>HK2300</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>Concorde</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>215</p>
+</td>
+<td width="65" style="width: 12.5%; height: 47px;">
+<p>20</p>
+</td>
+<td width="66" style="width: 12.5%; height: 47px;">
+<p>HK8000</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>Airbus</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>410</p>
+</td>
+<td width="65" style="width: 12.5%; height: 47px;">
+<p>10</p>
+</td>
+</tr>
+<tr style="height: 47px;">
+<td width="66" style="width: 12.5%; height: 47px;">
+<p>HK2300</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>Concorde</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>215</p>
+</td>
+<td width="65" style="width: 12.5%; height: 47px;">
+<p>20</p>
+</td>
+<td width="66" style="width: 12.5%; height: 47px;">
+<p>HK2300</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>Concorde</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>215</p>
+</td>
+<td width="65" style="width: 12.5%; height: 47px;">
+<p>20</p>
+</td>
+</tr>
+<tr style="background-color: #ffe900;">
+<td width="66" style="width: 12.5%; height: 47px;">
+<p>HK2300</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>Concorde</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>215</p>
+</td>
+<td width="65" style="width: 12.5%; height: 47px;">
+<p>20</p>
+</td>
+<td width="66" style="width: 12.5%; height: 47px;">
+<p>HK7400</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>Boeing</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>500</p>
+</td>
+<td width="65" style="width: 12.5%; height: 47px;">
+<p>30</p>
+</td>
+</tr>
+<tr style="background-color: #ffe900;">
+<td width="66" style="width: 12.5%; height: 47px;">
+<p>HK7400</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>Boeing</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>500</p>
+</td>
+<td width="65" style="width: 12.5%; height: 47px;">
+<p>30</p>
+</td>
+<td width="66" style="width: 12.5%; height: 47px;">
+<p>HK7800</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>Boeing</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>520</p>
+</td>
+<td width="65" style="width: 12.5%; height: 47px;">
+<p>10</p>
+</td>
+</tr>
+<tr style="height: 47px;">
+<td width="66" style="width: 12.5%; height: 47px;">
+<p>HK7400</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>Boeing</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>500</p>
+</td>
+<td width="65" style="width: 12.5%; height: 47px;">
+<p>30</p>
+</td>
+<td width="66" style="width: 12.5%; height: 47px;">
+<p>HK8000</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>Airbus</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>410</p>
+</td>
+<td width="65" style="width: 12.5%; height: 47px;">
+<p>10</p>
+</td>
+</tr>
+<tr style="height: 47px;">
+<td width="66" style="width: 12.5%; height: 47px;">
+<p>HK7400</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>Boeing</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>500</p>
+</td>
+<td width="65" style="width: 12.5%; height: 47px;">
+<p>30</p>
+</td>
+<td width="66" style="width: 12.5%; height: 47px;">
+<p>HK2300</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>Concorde</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>215</p>
+</td>
+<td width="65" style="width: 12.5%; height: 47px;">
+<p>20</p>
+</td>
+</tr>
+<tr style="height: 47px;">
+<td width="66" style="width: 12.5%; height: 47px;">
+<p>HK7400</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>Boeing</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>500</p>
+</td>
+<td width="65" style="width: 12.5%; height: 47px;">
+<p>30</p>
+</td>
+<td width="66" style="width: 12.5%; height: 47px;">
+<p>HK7400</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>Boeing</p>
+</td>
+<td width="70" style="width: 12.5%; height: 47px;">
+<p>500</p>
+</td>
+<td width="65" style="width: 12.5%; height: 47px;">
+<p>30</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-size: 1.05em;">Y al hacer B, es decir, al proyectar los valores de No.horasvuelo de la izquierda de dichas tuplas, obtenemos B.</span></p>
+<p>Por lo tanto, la solución a la consulta es A – B.</p>
+<p>Qué pasa si lo que se necesita es listar el número de horas de vuelo del avión que MENOS horas de vuelo tiene?</p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice" id="id68">
+<div class="iDevice emphasis0" >
+<div id="ta68_119_2" class="block iDevice_content">
+<div class="exe-text"><table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><a href="https://youtu.be/-1823OK8sC8">Operación Producto Cartesiano -Parte No. 1</a></td>
+<td style="width: 50%; text-align: center;"><a href="https://youtu.be/IXWMHi-BDjQ">Operación Producto Cartesiano - Parte No. 2</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="diferencia.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="secundarias.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

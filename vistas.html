@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>VISTAS | DESARROLLO DE BASES DE DATOS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="JORGE IVAN BEDOYA RESTREPO" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-38"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">DESARROLLO DE BASES DE DATOS</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">DESARROLLO DE BASES DE DATOS</a></li>
+   <li><a href="introduccion_a_sql_server.html" class="daddy">INTRODUCCION A SQL SERVER</a>
+   <ul class="other-section">
+      <li><a href="lenguaje_sql.html" class="no-ch">LENGUAJE SQL</a></li>
+      <li><a href="sql_vs_sql_server.html" class="no-ch">SQL VS SQL SERVER</a></li>
+      <li><a href="historia_de_sql_server.html" class="no-ch">HISTORIA DE SQL SERVER</a></li>
+      <li><a href="conectar_a_sql_server.html" class="no-ch">CONECTAR A SQL SERVER</a></li>
+      <li><a href="bases_de_datos_del_sistema.html" class="no-ch">BASES DE DATOS DEL SISTEMA</a></li>
+      <li><a href="gestion_de_backups.html" class="no-ch">GESTION DE BACKUPS</a></li>
+   </ul>
+   </li>
+   <li><a href="crud_en_sql_server.html" class="daddy">CRUD EN SQL SERVER</a>
+   <ul class="other-section">
+      <li><a href="gestion_de_bases_de_datos.html" class="no-ch">GESTION DE BASES DE DATOS</a></li>
+      <li><a href="gestion_de_tablas.html" class="no-ch">GESTION DE TABLAS</a></li>
+      <li><a href="campos_tipo_identity.html" class="no-ch">CAMPOS TIPO IDENTITY</a></li>
+      <li><a href="insercion_de_datos.html" class="no-ch">INSERCION DE DATOS</a></li>
+      <li><a href="actualizacion_de_datos.html" class="no-ch">ACTUALIZACION DE DATOS</a></li>
+      <li><a href="borrado_de_datos.html" class="no-ch">BORRADO DE DATOS</a></li>
+   </ul>
+   </li>
+   <li><a href="consulta_de_datos.html" class="daddy">CONSULTA DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="consultas_bsicas.html" class="no-ch">CONSULTAS BÁSICAS</a></li>
+      <li><a href="clusulas_and_or_between_in_like.html" class="no-ch">CLÁUSULAS AND, OR, BETWEEN, IN, LIKE</a></li>
+      <li><a href="cualificacin_de_atributos.html" class="no-ch">CUALIFICACIÓN DE ATRIBUTOS</a></li>
+      <li><a href="funciones_agregadas.html" class="no-ch">FUNCIONES AGREGADAS</a></li>
+      <li><a href="ttulos_a_columnas_del_resultado.html" class="no-ch">TÍTULOS A COLUMNAS DEL RESULTADO</a></li>
+      <li><a href="clusulas_lower_y_upper.html" class="no-ch">CLÁUSULAS LOWER Y UPPER</a></li>
+      <li><a href="clusulas_day_month_year_substring.html" class="no-ch">CLÁUSULAS DAY, MONTH, YEAR, SUBSTRING</a></li>
+      <li><a href="order_by__asc__desc.html" class="no-ch">ORDER BY ... ASC / DESC</a></li>
+      <li><a href="clausula_top.html" class="no-ch">CLAUSULA TOP</a></li>
+      <li><a href="subconsultas.html" class="no-ch">SUBCONSULTAS</a></li>
+      <li><a href="clausula_group_by__having.html" class="no-ch">CLAUSULA GROUP BY / HAVING</a></li>
+      <li><a href="clausulas_any_y_all.html" class="no-ch">CLAUSULAS ANY Y ALL</a></li>
+   </ul>
+   </li>
+   <li><a href="relacion_entre_tablas.html" class="daddy">RELACION ENTRE TABLAS</a>
+   <ul class="other-section">
+      <li><a href="cmo_se_relacionan_tablas.html" class="no-ch">CÓMO SE RELACIONAN TABLAS?</a></li>
+      <li><a href="diagrama_de_la_base_de_datos.html" class="no-ch">DIAGRAMA DE LA BASE DE DATOS</a></li>
+      <li><a href="integridad_referencial.html" class="no-ch">INTEGRIDAD REFERENCIAL</a></li>
+   </ul>
+   </li>
+   <li><a href="joins.html" class="daddy">JOINS</a>
+   <ul class="other-section">
+      <li><a href="concepto_de_join.html" class="no-ch">CONCEPTO DE JOIN</a></li>
+      <li><a href="tipos_de_joins.html" class="daddy">TIPOS DE JOINS</a>
+      <ul class="other-section">
+         <li><a href="inner_join.html" class="no-ch">INNER JOIN</a></li>
+         <li><a href="left__right__full_join.html" class="no-ch">LEFT / RIGHT / FULL JOIN</a></li>
+      </ul>
+      </li>
+      <li><a href="joins_de_mas_de_dos_tablas.html" class="no-ch">JOINS DE MAS DE DOS TABLAS</a></li>
+   </ul>
+   </li>
+   <li><a href="algebra_relacional.html" class="daddy">ALGEBRA RELACIONAL</a>
+   <ul class="other-section">
+      <li><a href="introduccionque_es.html" class="no-ch">INTRODUCCION.....QUE ES?</a></li>
+      <li><a href="tipos_de_operaciones.html" class="no-ch">TIPOS DE OPERACIONES</a></li>
+      <li><a href="operaciones.html" class="daddy">OPERACIONES</a>
+      <ul class="other-section">
+         <li><a href="primarias.html" class="daddy">PRIMARIAS</a>
+         <ul class="other-section">
+            <li><a href="seleccion.html" class="no-ch">SELECCION</a></li>
+            <li><a href="proyeccion.html" class="no-ch">PROYECCION</a></li>
+            <li><a href="renombramiento.html" class="no-ch">RENOMBRAMIENTO</a></li>
+            <li><a href="union.html" class="no-ch">UNION</a></li>
+            <li><a href="diferencia.html" class="no-ch">DIFERENCIA</a></li>
+            <li><a href="producto_cartesiano.html" class="no-ch">PRODUCTO CARTESIANO</a></li>
+         </ul>
+         </li>
+         <li><a href="secundarias.html" class="daddy">SECUNDARIAS</a>
+         <ul class="other-section">
+            <li><a href="reunion_natural.html" class="no-ch">REUNION NATURAL</a></li>
+            <li><a href="interseccion.html" class="no-ch">INTERSECCION</a></li>
+            <li><a href="division.html" class="no-ch">DIVISION</a></li>
+         </ul>
+         </li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li id="active"><a href="vistas.html" class="active no-ch">VISTAS</a></li>
+   <li><a href="calcular_atributos_derivados.html" class="no-ch">CALCULAR ATRIBUTOS DERIVADOS</a></li>
+   <li><a href="check_constraints.html" class="no-ch">CHECK CONSTRAINTS</a></li>
+   <li><a href="programacion_de_bases_de_datos.html" class="daddy">PROGRAMACION DE BASES DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="procedimientos_almacenados.html" class="no-ch">PROCEDIMIENTOS ALMACENADOS</a></li>
+      <li><a href="funciones_de_usuario.html" class="daddy">FUNCIONES DE USUARIO</a>
+      <ul class="other-section">
+         <li><a href="funciones_escalares.html" class="no-ch">FUNCIONES ESCALARES</a></li>
+         <li><a href="funciones_de_tablas.html" class="no-ch">FUNCIONES DE TABLAS</a></li>
+      </ul>
+      </li>
+      <li><a href="triggers.html" class="no-ch">TRIGGERS</a></li>
+      <li><a href="control_de_errores.html" class="no-ch">CONTROL DE ERRORES</a></li>
+      <li><a href="transacciones__atomicidad.html" class="no-ch">TRANSACCIONES / ATOMICIDAD</a></li>
+      <li><a href="manejo_de_cursores.html" class="no-ch">MANEJO DE CURSORES</a></li>
+   </ul>
+   </li>
+   <li><a href="temas_adicionales.html" class="daddy">TEMAS ADICIONALES</a>
+   <ul class="other-section">
+      <li><a href="encriptamiento_de_datos.html" class="no-ch">ENCRIPTAMIENTO DE DATOS</a></li>
+      <li><a href="clusula_case.html" class="no-ch">CLÁUSULA CASE</a></li>
+      <li><a href="inserts_con_datos_de_otras_tablas.html" class="no-ch">INSERTs CON DATOS DE OTRAS TABLAS</a></li>
+      <li><a href="manejo_de_nulos.html" class="no-ch">MANEJO DE NULOS</a></li>
+      <li><a href="truncate_vs_delete_vs_drop.html" class="no-ch">TRUNCATE vs DELETE vs DROP</a></li>
+      <li><a href="merge.html" class="no-ch">MERGE</a></li>
+      <li><a href="otros_comodines_del_like.html" class="no-ch">OTROS COMODINES DEL LIKE</a></li>
+      <li><a href="funciones_numricas.html" class="no-ch">FUNCIONES NUMÉRICAS</a></li>
+      <li><a href="funciones_tipo_fecha.html" class="no-ch">FUNCIONES TIPO FECHA</a></li>
+      <li><a href="funciones_tipo_string.html" class="no-ch">FUNCIONES TIPO STRING</a></li>
+      <li><a href="clausula_default.html" class="no-ch">CLAUSULA DEFAULT</a></li>
+      <li><a href="clausula_distinct.html" class="no-ch">CLAUSULA DISTINCT</a></li>
+      <li><a href="borrado__actualizacion_en_cascada.html" class="no-ch">BORRADO / ACTUALIZACION EN CASCADA</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="division.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="calcular_atributos_derivados.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">VISTAS</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id85">
+<div class="iDevice emphasis0" >
+<div id="ta85_112_2" class="block iDevice_content">
+<div class="exe-text"><p></p>
+<table border="1" style="width: 85.5276%; height: 193px;">
+<tbody>
+<tr style="height: 194px;">
+<td style="width: 50%; height: 194px; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">Una vista es una "estructura" que está almacenada en la base de datos, tal y como se aprecia en la imagen.</span></td>
+<td style="width: 50%; height: 194px; text-align: justify;"><img src="VISTAS.jpg" alt="VIEWS" width="573" height="322" /></td>
+</tr>
+</tbody>
+</table>
+<table border="1" style="width: 85.3267%;" height="262">
+<tbody>
+<tr>
+<td style="width: 50%;">
+<p style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">Pero cuando se analiza bien qué queda grabada en una vista es simplemente una instrucción SELECT. Por lo tanto, una vista es una instrucción SELECT almacenada en la base de datos.</span></p>
+<p style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">Toda vista tiene tabla(s) base(s). Estas son las tablas que están incluidas en el SELECT almacenado, asociado a la vista.</span></p>
+<p></p>
+<p></p>
+</td>
+<td style="width: 50%;"><img src="SELECT_ALMACENADO.jpg" alt="SA" width="1366" height="768" /></td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;">La instrucción para crear una vista es la siguiente:</p>
+<p style="text-align: justify;">CREATE VIEW &lt;nombre vista&gt; AS</p>
+<p style="text-align: justify;">    Instrucción SELECT asociada</p>
+<p style="text-align: justify;">Para poder usar una vista, podemos digitar</p>
+<p style="text-align: justify;">    SELECT * FROM &lt;vista&gt;.</p>
+<p style="text-align: justify;">Por ejemplo, creemos la siguiente vista:</p>
+<p style="text-align: justify;">   CREATE VIEW vista1 AS</p>
+<p style="text-align: justify;">          SELECT CEDULA, NOMBRE   FROM    VETERINARIO   WHERE   EDAD &lt; 30</p>
+<p style="text-align: justify;">Cuando necesitamos usar la vista creada, podemos digitar</p>
+<p style="text-align: justify;">   SELECT * FROM vista1</p>
+<p style="text-align: justify;">Al ejecutar la anterior instrucción, es como si ejecutáramos el SELECT asociado a la vista, es decir, me mostrará la cédula y el nombre de los veterinarios menores de 30 años.</p>
+<p style="text-align: justify;">Es importante resaltar acá que a través de la vista, llamada vista1, no se puede acceder a los datos de los veterinarios de 30 años de edad o más. Yendo más allá, a través de la vista creada solamente se puede acceder a la cédula y el nombre de los veterinarios menores de 30 años, no es posible acceder a los demás datos de dichos veterinarios (edad, sexo, dirección, sueldo, etc.). Por lo tanto, una de las razones más importantes para utilizar vistas es para <strong>controlar el acceso a los datos</strong> de la base de datos. Es posible que haya un usuario que necesite ver, en su operación diaria, la cédula y el nombre de dichos veterinarios. Pero es un usuario que no tiene permiso para mirar los demás datos de dichos veterinarios. A través de esta vista, estaremos controlándole el acceso a los datos a dicho usuario. </p>
+<p style="text-align: justify;">Si en la vista anterior, tratamos de ejecutar la siguiente consulta:</p>
+<p style="text-align: justify;">SELECT NOMBRE, EDAD    FROM   vista1</p>
+<p style="text-align: justify;">La anterior consulta sacaría error ya que el campo EDAD no está incluida en la definición de la vista.</p>
+<p style="text-align: justify;">Por otra parte, existen vistas que son actualizables. Las vistas actualizables son aquellas que permiten, a través de ellas, actualizar los datos de su(s) tabla(s) base(s). Por ejemplo, en la anterior vista, vista1, podríamos hacer lo siguiente:</p>
+<p style="text-align: justify;">UPDATE vista1   SET  nombre = 'Lina Gonzalez Sierra'   WHERE nombre = 'Lina Gonzalez'</p>
+<p style="text-align: justify;">Lo que pasaría, ejecutando la anterior instrucción, es que se actualizaría, en la tabla VETERINARIO, los datos, según lo especificado. A través de la vista, se pueden actualizar datos en la(s) tabla(s) base(s).</p>
+<p style="text-align: justify;">Qué pasaría si se intenta hacer un INSERT a través de la vista? Y un DELETE?</p>
+<p style="text-align: justify;">Por otra parte, SQL Server permite crear una vista con la cláusula WITH CHECK OPTION. La sintaxis sería de la siguiente manera:</p>
+<p style="text-align: justify;">CREATE VIEW vista1 AS</p>
+<p style="text-align: justify;">     SELECT CEDULA, NOMBRE   FROM    VETERINARIO   WHERE   NOMBRE  LIKE '[A-E]%'  <strong>WITH CHECK OPTION</strong></p>
+<p style="text-align: justify;">Con esta cláusula se asegura que a través de la vista no se puedan actualizar los datos de la(s) tabla(s) base(s), violando la(s) condicion(es) del WHERE. Por ejemplo, suponga que deseamos ejecutar lo siguiente:</p>
+<p style="text-align: justify;">    UPDATE   vista1     SET  NOMBRE = 'Francisco Jaramillo'    WHERE   NOMBRE = 'Ana Leal'</p>
+<p style="text-align: justify;">La anterior instrucción sacaría error, ya que se está tratando de actualizar el nombre de un veterinario por uno que empieza por F, cuando en la definición de la vista esta seleccionando veterinarios con nombres que empiezan por A, B, C, D o E.</p>
+<hr />
+<p style="text-align: justify;">Video:</p>
+<p style="text-align: justify;"><a href="https://youtu.be/bTgXuaxVfOM">Vistas en SQL</a></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="division.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="calcular_atributos_derivados.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>PROYECCION | DESARROLLO DE BASES DE DATOS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="JORGE IVAN BEDOYA RESTREPO" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-56"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">DESARROLLO DE BASES DE DATOS</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">DESARROLLO DE BASES DE DATOS</a></li>
+   <li><a href="introduccion_a_sql_server.html" class="daddy">INTRODUCCION A SQL SERVER</a>
+   <ul class="other-section">
+      <li><a href="lenguaje_sql.html" class="no-ch">LENGUAJE SQL</a></li>
+      <li><a href="sql_vs_sql_server.html" class="no-ch">SQL VS SQL SERVER</a></li>
+      <li><a href="historia_de_sql_server.html" class="no-ch">HISTORIA DE SQL SERVER</a></li>
+      <li><a href="conectar_a_sql_server.html" class="no-ch">CONECTAR A SQL SERVER</a></li>
+      <li><a href="bases_de_datos_del_sistema.html" class="no-ch">BASES DE DATOS DEL SISTEMA</a></li>
+      <li><a href="gestion_de_backups.html" class="no-ch">GESTION DE BACKUPS</a></li>
+   </ul>
+   </li>
+   <li><a href="crud_en_sql_server.html" class="daddy">CRUD EN SQL SERVER</a>
+   <ul class="other-section">
+      <li><a href="gestion_de_bases_de_datos.html" class="no-ch">GESTION DE BASES DE DATOS</a></li>
+      <li><a href="gestion_de_tablas.html" class="no-ch">GESTION DE TABLAS</a></li>
+      <li><a href="campos_tipo_identity.html" class="no-ch">CAMPOS TIPO IDENTITY</a></li>
+      <li><a href="insercion_de_datos.html" class="no-ch">INSERCION DE DATOS</a></li>
+      <li><a href="actualizacion_de_datos.html" class="no-ch">ACTUALIZACION DE DATOS</a></li>
+      <li><a href="borrado_de_datos.html" class="no-ch">BORRADO DE DATOS</a></li>
+   </ul>
+   </li>
+   <li><a href="consulta_de_datos.html" class="daddy">CONSULTA DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="consultas_bsicas.html" class="no-ch">CONSULTAS BÁSICAS</a></li>
+      <li><a href="clusulas_and_or_between_in_like.html" class="no-ch">CLÁUSULAS AND, OR, BETWEEN, IN, LIKE</a></li>
+      <li><a href="cualificacin_de_atributos.html" class="no-ch">CUALIFICACIÓN DE ATRIBUTOS</a></li>
+      <li><a href="funciones_agregadas.html" class="no-ch">FUNCIONES AGREGADAS</a></li>
+      <li><a href="ttulos_a_columnas_del_resultado.html" class="no-ch">TÍTULOS A COLUMNAS DEL RESULTADO</a></li>
+      <li><a href="clusulas_lower_y_upper.html" class="no-ch">CLÁUSULAS LOWER Y UPPER</a></li>
+      <li><a href="clusulas_day_month_year_substring.html" class="no-ch">CLÁUSULAS DAY, MONTH, YEAR, SUBSTRING</a></li>
+      <li><a href="order_by__asc__desc.html" class="no-ch">ORDER BY ... ASC / DESC</a></li>
+      <li><a href="clausula_top.html" class="no-ch">CLAUSULA TOP</a></li>
+      <li><a href="subconsultas.html" class="no-ch">SUBCONSULTAS</a></li>
+      <li><a href="clausula_group_by__having.html" class="no-ch">CLAUSULA GROUP BY / HAVING</a></li>
+      <li><a href="clausulas_any_y_all.html" class="no-ch">CLAUSULAS ANY Y ALL</a></li>
+   </ul>
+   </li>
+   <li><a href="relacion_entre_tablas.html" class="daddy">RELACION ENTRE TABLAS</a>
+   <ul class="other-section">
+      <li><a href="cmo_se_relacionan_tablas.html" class="no-ch">CÓMO SE RELACIONAN TABLAS?</a></li>
+      <li><a href="diagrama_de_la_base_de_datos.html" class="no-ch">DIAGRAMA DE LA BASE DE DATOS</a></li>
+      <li><a href="integridad_referencial.html" class="no-ch">INTEGRIDAD REFERENCIAL</a></li>
+   </ul>
+   </li>
+   <li><a href="joins.html" class="daddy">JOINS</a>
+   <ul class="other-section">
+      <li><a href="concepto_de_join.html" class="no-ch">CONCEPTO DE JOIN</a></li>
+      <li><a href="tipos_de_joins.html" class="daddy">TIPOS DE JOINS</a>
+      <ul class="other-section">
+         <li><a href="inner_join.html" class="no-ch">INNER JOIN</a></li>
+         <li><a href="left__right__full_join.html" class="no-ch">LEFT / RIGHT / FULL JOIN</a></li>
+      </ul>
+      </li>
+      <li><a href="joins_de_mas_de_dos_tablas.html" class="no-ch">JOINS DE MAS DE DOS TABLAS</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="algebra_relacional.html" class="current-page-parent daddy">ALGEBRA RELACIONAL</a>
+   <ul>
+      <li><a href="introduccionque_es.html" class="no-ch">INTRODUCCION.....QUE ES?</a></li>
+      <li><a href="tipos_de_operaciones.html" class="no-ch">TIPOS DE OPERACIONES</a></li>
+      <li class="current-page-parent"><a href="operaciones.html" class="current-page-parent daddy">OPERACIONES</a>
+      <ul>
+         <li class="current-page-parent"><a href="primarias.html" class="current-page-parent daddy">PRIMARIAS</a>
+         <ul>
+            <li><a href="seleccion.html" class="no-ch">SELECCION</a></li>
+            <li id="active"><a href="proyeccion.html" class="active no-ch">PROYECCION</a></li>
+            <li><a href="renombramiento.html" class="no-ch">RENOMBRAMIENTO</a></li>
+            <li><a href="union.html" class="no-ch">UNION</a></li>
+            <li><a href="diferencia.html" class="no-ch">DIFERENCIA</a></li>
+            <li><a href="producto_cartesiano.html" class="no-ch">PRODUCTO CARTESIANO</a></li>
+         </ul>
+         </li>
+         <li><a href="secundarias.html" class="daddy">SECUNDARIAS</a>
+         <ul class="other-section">
+            <li><a href="reunion_natural.html" class="no-ch">REUNION NATURAL</a></li>
+            <li><a href="interseccion.html" class="no-ch">INTERSECCION</a></li>
+            <li><a href="division.html" class="no-ch">DIVISION</a></li>
+         </ul>
+         </li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="vistas.html" class="no-ch">VISTAS</a></li>
+   <li><a href="calcular_atributos_derivados.html" class="no-ch">CALCULAR ATRIBUTOS DERIVADOS</a></li>
+   <li><a href="check_constraints.html" class="no-ch">CHECK CONSTRAINTS</a></li>
+   <li><a href="programacion_de_bases_de_datos.html" class="daddy">PROGRAMACION DE BASES DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="procedimientos_almacenados.html" class="no-ch">PROCEDIMIENTOS ALMACENADOS</a></li>
+      <li><a href="funciones_de_usuario.html" class="daddy">FUNCIONES DE USUARIO</a>
+      <ul class="other-section">
+         <li><a href="funciones_escalares.html" class="no-ch">FUNCIONES ESCALARES</a></li>
+         <li><a href="funciones_de_tablas.html" class="no-ch">FUNCIONES DE TABLAS</a></li>
+      </ul>
+      </li>
+      <li><a href="triggers.html" class="no-ch">TRIGGERS</a></li>
+      <li><a href="control_de_errores.html" class="no-ch">CONTROL DE ERRORES</a></li>
+      <li><a href="transacciones__atomicidad.html" class="no-ch">TRANSACCIONES / ATOMICIDAD</a></li>
+      <li><a href="manejo_de_cursores.html" class="no-ch">MANEJO DE CURSORES</a></li>
+   </ul>
+   </li>
+   <li><a href="temas_adicionales.html" class="daddy">TEMAS ADICIONALES</a>
+   <ul class="other-section">
+      <li><a href="encriptamiento_de_datos.html" class="no-ch">ENCRIPTAMIENTO DE DATOS</a></li>
+      <li><a href="clusula_case.html" class="no-ch">CLÁUSULA CASE</a></li>
+      <li><a href="inserts_con_datos_de_otras_tablas.html" class="no-ch">INSERTs CON DATOS DE OTRAS TABLAS</a></li>
+      <li><a href="manejo_de_nulos.html" class="no-ch">MANEJO DE NULOS</a></li>
+      <li><a href="truncate_vs_delete_vs_drop.html" class="no-ch">TRUNCATE vs DELETE vs DROP</a></li>
+      <li><a href="merge.html" class="no-ch">MERGE</a></li>
+      <li><a href="otros_comodines_del_like.html" class="no-ch">OTROS COMODINES DEL LIKE</a></li>
+      <li><a href="funciones_numricas.html" class="no-ch">FUNCIONES NUMÉRICAS</a></li>
+      <li><a href="funciones_tipo_fecha.html" class="no-ch">FUNCIONES TIPO FECHA</a></li>
+      <li><a href="funciones_tipo_string.html" class="no-ch">FUNCIONES TIPO STRING</a></li>
+      <li><a href="clausula_default.html" class="no-ch">CLAUSULA DEFAULT</a></li>
+      <li><a href="clausula_distinct.html" class="no-ch">CLAUSULA DISTINCT</a></li>
+      <li><a href="borrado__actualizacion_en_cascada.html" class="no-ch">BORRADO / ACTUALIZACION EN CASCADA</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="seleccion.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="renombramiento.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">PROYECCION</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id22">
+<div class="iDevice emphasis0" >
+<div id="ta22_111_2" class="block iDevice_content">
+<div class="exe-text"><p><strong>Operación Proyección</strong></p>
+<ul>
+<li>Tipo: Unaria</li>
+<li>Sintaxis:</li>
+</ul>
+<p>            Π <sub>atributo1, atributo2,…….,atributo N</sub> (Tabla)</p>
+<ul>
+<li>Descripción: Operación que selecciona valores de atributos específicos de una tabla.</li>
+<li>Ejemplo: Listar la placa y marca de todos los carros.</li>
+</ul>
+<p>                Π <sub>placa, marca</sub> (Carro)</p>
+<p> La operación anterior da como resultado una tabla3 con dos atributos: placa y marca. Esa es la diferencia con la selección. La proyección selecciona atributos específicos que se necesitan imprimir.</p>
+<p> Sugerencia: Siempre que se vaya a escribir una operación del álgebra relacional se debe respetar la sintaxis de la misma.</p>
+<ul>
+<li>Ejemplo: Listar la placa y modelo de los carros que sean de marca Chevrolet.</li>
+</ul>
+<p>En esta consulta surge una primera dificultad y es que se está pidiendo imprimir ciertos atributos pero condicionado a algo. Y como se puede ver, la proyección no permite poner condiciones. Por lo tanto, hay que empezar a combinar operaciones. </p>
+<p>Para escribir la solución de esta consulta, hay dos posibilidades:</p>
+<p>Posibilidad 1:  Ϭ <sub>marca = “Chevrolet”</sub> (Π <sub>placa, modelo</sub> (Carro)) </p>
+<p>Posibilidad 2: Π <sub>placa, marca</sub> (Ϭ <sub>marca = “Chevrolet”</sub> (Carro)) </p>
+<p>Se debe recalcar que ambas posibilidades están bien sintácticamente hablando pero hay una que hace lo que se pide y la otra no.</p>
+<p>Por qué ambas están bien sintácticamente?</p>
+<p>Como en toda operación aritmética, primero se hace lo que hay en paréntesis y luego el resto. Es decir, en la posibilidad 1, primero se hace la proyección dando como resultado una tabla3 y luego se hace la selección  sobre ese resultado anterior. Como se puede ver, individualmente, no se está violando la sintaxis de la proyección ni de la selección.</p>
+<p><img src="POsibilidad_1.jpg" alt="posibilidad1" width="849" height="240" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: center;"><span style="font-size: 8pt;">Fuente Propia.</span></p>
+<p>Lo mismo sucede con la posibilidad 2, está bien escrita sintácticamente.</p>
+<p>Como se dijo anteriormente, a pesar de que ambas están bien sintácticamente, solo una de las dos funciona para lo que se pide.</p>
+<p>Analicemos la posibilidad 1….primero se hace la proyección que es lo que está dentro del paréntesis. Esto genera una tabla con la placa y marca de todos los carros (Tabla 3). Y luego se hace una selección a esta tabla resultante donde en la condición se pregunta por la marca y como se puede observar la marca no es un atributo que forma parte de la Tabla3 generada en la proyección. Luego acá se genera un error. (Es como si se hiciera un SELECT donde en el WHERE se invoca un campo que no existe en la tabla que está en el FROM). </p>
+<p>En cambio la posibilidad 2, primero se seleccionan tuplas completas de los carros marca Chevrolet y luego a dichas tuplas se les imprime su placa y su marca. Lo cual es correcto y hace lo que se está pidiendo.</p>
+<p>Por lo tanto, la solución a la consulta propuesta es la posibilidad 2. </p>
+<p>Este resultado enseña que, teniendo el siguiente SELECT,….</p>
+<p>            SELECT ca.placa, ca.marca</p>
+<p>            FROM carro</p>
+<p>            WHERE ca.marca = “Chevrolet” </p>
+<p>….. primero se ejecuta el WHERE y luego se hace lo de la cláusula SELECT.</p>
+<p>Es una muestra de que el álgebra relacional permite entender <strong><u>“cómo”</u></strong> se ejecuta una instrucción SELECT.</p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice" id="id28">
+<div class="iDevice emphasis0" >
+<div id="ta28_117_2" class="block iDevice_content">
+<div class="exe-text"><p>Video:</p>
+<p><a href="https://youtu.be/XZ4o0DFehxQ">Operación Proyección</a></p>
+<p></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="seleccion.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="renombramiento.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

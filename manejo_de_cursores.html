@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>MANEJO DE CURSORES | DESARROLLO DE BASES DE DATOS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="JORGE IVAN BEDOYA RESTREPO" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-46"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">DESARROLLO DE BASES DE DATOS</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">DESARROLLO DE BASES DE DATOS</a></li>
+   <li><a href="introduccion_a_sql_server.html" class="daddy">INTRODUCCION A SQL SERVER</a>
+   <ul class="other-section">
+      <li><a href="lenguaje_sql.html" class="no-ch">LENGUAJE SQL</a></li>
+      <li><a href="sql_vs_sql_server.html" class="no-ch">SQL VS SQL SERVER</a></li>
+      <li><a href="historia_de_sql_server.html" class="no-ch">HISTORIA DE SQL SERVER</a></li>
+      <li><a href="conectar_a_sql_server.html" class="no-ch">CONECTAR A SQL SERVER</a></li>
+      <li><a href="bases_de_datos_del_sistema.html" class="no-ch">BASES DE DATOS DEL SISTEMA</a></li>
+      <li><a href="gestion_de_backups.html" class="no-ch">GESTION DE BACKUPS</a></li>
+   </ul>
+   </li>
+   <li><a href="crud_en_sql_server.html" class="daddy">CRUD EN SQL SERVER</a>
+   <ul class="other-section">
+      <li><a href="gestion_de_bases_de_datos.html" class="no-ch">GESTION DE BASES DE DATOS</a></li>
+      <li><a href="gestion_de_tablas.html" class="no-ch">GESTION DE TABLAS</a></li>
+      <li><a href="campos_tipo_identity.html" class="no-ch">CAMPOS TIPO IDENTITY</a></li>
+      <li><a href="insercion_de_datos.html" class="no-ch">INSERCION DE DATOS</a></li>
+      <li><a href="actualizacion_de_datos.html" class="no-ch">ACTUALIZACION DE DATOS</a></li>
+      <li><a href="borrado_de_datos.html" class="no-ch">BORRADO DE DATOS</a></li>
+   </ul>
+   </li>
+   <li><a href="consulta_de_datos.html" class="daddy">CONSULTA DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="consultas_bsicas.html" class="no-ch">CONSULTAS BÁSICAS</a></li>
+      <li><a href="clusulas_and_or_between_in_like.html" class="no-ch">CLÁUSULAS AND, OR, BETWEEN, IN, LIKE</a></li>
+      <li><a href="cualificacin_de_atributos.html" class="no-ch">CUALIFICACIÓN DE ATRIBUTOS</a></li>
+      <li><a href="funciones_agregadas.html" class="no-ch">FUNCIONES AGREGADAS</a></li>
+      <li><a href="ttulos_a_columnas_del_resultado.html" class="no-ch">TÍTULOS A COLUMNAS DEL RESULTADO</a></li>
+      <li><a href="clusulas_lower_y_upper.html" class="no-ch">CLÁUSULAS LOWER Y UPPER</a></li>
+      <li><a href="clusulas_day_month_year_substring.html" class="no-ch">CLÁUSULAS DAY, MONTH, YEAR, SUBSTRING</a></li>
+      <li><a href="order_by__asc__desc.html" class="no-ch">ORDER BY ... ASC / DESC</a></li>
+      <li><a href="clausula_top.html" class="no-ch">CLAUSULA TOP</a></li>
+      <li><a href="subconsultas.html" class="no-ch">SUBCONSULTAS</a></li>
+      <li><a href="clausula_group_by__having.html" class="no-ch">CLAUSULA GROUP BY / HAVING</a></li>
+      <li><a href="clausulas_any_y_all.html" class="no-ch">CLAUSULAS ANY Y ALL</a></li>
+   </ul>
+   </li>
+   <li><a href="relacion_entre_tablas.html" class="daddy">RELACION ENTRE TABLAS</a>
+   <ul class="other-section">
+      <li><a href="cmo_se_relacionan_tablas.html" class="no-ch">CÓMO SE RELACIONAN TABLAS?</a></li>
+      <li><a href="diagrama_de_la_base_de_datos.html" class="no-ch">DIAGRAMA DE LA BASE DE DATOS</a></li>
+      <li><a href="integridad_referencial.html" class="no-ch">INTEGRIDAD REFERENCIAL</a></li>
+   </ul>
+   </li>
+   <li><a href="joins.html" class="daddy">JOINS</a>
+   <ul class="other-section">
+      <li><a href="concepto_de_join.html" class="no-ch">CONCEPTO DE JOIN</a></li>
+      <li><a href="tipos_de_joins.html" class="daddy">TIPOS DE JOINS</a>
+      <ul class="other-section">
+         <li><a href="inner_join.html" class="no-ch">INNER JOIN</a></li>
+         <li><a href="left__right__full_join.html" class="no-ch">LEFT / RIGHT / FULL JOIN</a></li>
+      </ul>
+      </li>
+      <li><a href="joins_de_mas_de_dos_tablas.html" class="no-ch">JOINS DE MAS DE DOS TABLAS</a></li>
+   </ul>
+   </li>
+   <li><a href="algebra_relacional.html" class="daddy">ALGEBRA RELACIONAL</a>
+   <ul class="other-section">
+      <li><a href="introduccionque_es.html" class="no-ch">INTRODUCCION.....QUE ES?</a></li>
+      <li><a href="tipos_de_operaciones.html" class="no-ch">TIPOS DE OPERACIONES</a></li>
+      <li><a href="operaciones.html" class="daddy">OPERACIONES</a>
+      <ul class="other-section">
+         <li><a href="primarias.html" class="daddy">PRIMARIAS</a>
+         <ul class="other-section">
+            <li><a href="seleccion.html" class="no-ch">SELECCION</a></li>
+            <li><a href="proyeccion.html" class="no-ch">PROYECCION</a></li>
+            <li><a href="renombramiento.html" class="no-ch">RENOMBRAMIENTO</a></li>
+            <li><a href="union.html" class="no-ch">UNION</a></li>
+            <li><a href="diferencia.html" class="no-ch">DIFERENCIA</a></li>
+            <li><a href="producto_cartesiano.html" class="no-ch">PRODUCTO CARTESIANO</a></li>
+         </ul>
+         </li>
+         <li><a href="secundarias.html" class="daddy">SECUNDARIAS</a>
+         <ul class="other-section">
+            <li><a href="reunion_natural.html" class="no-ch">REUNION NATURAL</a></li>
+            <li><a href="interseccion.html" class="no-ch">INTERSECCION</a></li>
+            <li><a href="division.html" class="no-ch">DIVISION</a></li>
+         </ul>
+         </li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="vistas.html" class="no-ch">VISTAS</a></li>
+   <li><a href="calcular_atributos_derivados.html" class="no-ch">CALCULAR ATRIBUTOS DERIVADOS</a></li>
+   <li><a href="check_constraints.html" class="no-ch">CHECK CONSTRAINTS</a></li>
+   <li class="current-page-parent"><a href="programacion_de_bases_de_datos.html" class="current-page-parent daddy">PROGRAMACION DE BASES DE DATOS</a>
+   <ul>
+      <li><a href="procedimientos_almacenados.html" class="no-ch">PROCEDIMIENTOS ALMACENADOS</a></li>
+      <li><a href="funciones_de_usuario.html" class="daddy">FUNCIONES DE USUARIO</a>
+      <ul class="other-section">
+         <li><a href="funciones_escalares.html" class="no-ch">FUNCIONES ESCALARES</a></li>
+         <li><a href="funciones_de_tablas.html" class="no-ch">FUNCIONES DE TABLAS</a></li>
+      </ul>
+      </li>
+      <li><a href="triggers.html" class="no-ch">TRIGGERS</a></li>
+      <li><a href="control_de_errores.html" class="no-ch">CONTROL DE ERRORES</a></li>
+      <li><a href="transacciones__atomicidad.html" class="no-ch">TRANSACCIONES / ATOMICIDAD</a></li>
+      <li id="active"><a href="manejo_de_cursores.html" class="active no-ch">MANEJO DE CURSORES</a></li>
+   </ul>
+   </li>
+   <li><a href="temas_adicionales.html" class="daddy">TEMAS ADICIONALES</a>
+   <ul class="other-section">
+      <li><a href="encriptamiento_de_datos.html" class="no-ch">ENCRIPTAMIENTO DE DATOS</a></li>
+      <li><a href="clusula_case.html" class="no-ch">CLÁUSULA CASE</a></li>
+      <li><a href="inserts_con_datos_de_otras_tablas.html" class="no-ch">INSERTs CON DATOS DE OTRAS TABLAS</a></li>
+      <li><a href="manejo_de_nulos.html" class="no-ch">MANEJO DE NULOS</a></li>
+      <li><a href="truncate_vs_delete_vs_drop.html" class="no-ch">TRUNCATE vs DELETE vs DROP</a></li>
+      <li><a href="merge.html" class="no-ch">MERGE</a></li>
+      <li><a href="otros_comodines_del_like.html" class="no-ch">OTROS COMODINES DEL LIKE</a></li>
+      <li><a href="funciones_numricas.html" class="no-ch">FUNCIONES NUMÉRICAS</a></li>
+      <li><a href="funciones_tipo_fecha.html" class="no-ch">FUNCIONES TIPO FECHA</a></li>
+      <li><a href="funciones_tipo_string.html" class="no-ch">FUNCIONES TIPO STRING</a></li>
+      <li><a href="clausula_default.html" class="no-ch">CLAUSULA DEFAULT</a></li>
+      <li><a href="clausula_distinct.html" class="no-ch">CLAUSULA DISTINCT</a></li>
+      <li><a href="borrado__actualizacion_en_cascada.html" class="no-ch">BORRADO / ACTUALIZACION EN CASCADA</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="transacciones__atomicidad.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="temas_adicionales.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">MANEJO DE CURSORES</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id97">
+<div class="iDevice emphasis0" >
+<div id="ta97_108_2" class="block iDevice_content">
+<div class="exe-text"><table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 49.9065%;">
+<p><img src="img0.15.png" width="374" height="278" alt="sql" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: center;"><span style="font-size: 8pt;">Fuente. https://www.techmixing.com/2011/07/cursor-in-sql-server.html</span></p>
+</td>
+<td style="width: 50.0935%;">
+<p style="text-align: justify;"><span style="font-size: 12pt;">La utilización de cursores en la programación de bases de datos es más común de lo que se cree.</span></p>
+<p style="text-align: justify;"><span style="font-size: 12pt;">En este módulo se aborda el tema de cursores, su definición, implementación, ventajas y desventajas.</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Un cursor es un espacio en memoria RAM, dispuesto para almacenar las tuplas resultantes de un SELECT.</span></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Cuando se necesita hacer una consulta, pero el resultado de dicha consulta se necesita para procesarlo, no para ver su resultado, se puede usar un cursor.</span></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Vamos a mirar un ejemplo concreto para entender el concepto. Supongamos que se tiene una tabla con los datos de los libros de una librería, tal y como se muestra a continuación:</span></p>
+<p><img src="img1.14.png" width="479" height="309" alt="mkn" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Supongamos que necesitamos aumentar el precio de los libros, en un 16%, que tengan un precio inferior a 100000 y que sean de género 200 o 300. Se debe advertir que este proceso se podría hacer de una manera más fácil (cómo sería?), pero se quiere mostrar cómo se hace utilizando cursores, con el fin de entender el concepto.</span></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">A continuación vamos a mirar, en detalle, el procedimiento almacenado que implementa este problema.</span></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Al principio de la lógica, se declara un cursor llamado CURSOR1, y en la declaración se le asocia un SELECT. Las tuplas resultantes de dicho SELECT son las que se almacenan en el cursor. En este caso, al cursor llamado CURSOR1, se le asocia el codigo, precio y codigo de género de todos los libros.</span></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Declarar un cursor significa reservar el espacio en memoria RAM que alojará el resultado del SELECT. Este espacio aun está vacío, es decir, el SELECT aún no se ejecuta.</span></p>
+<p><img src="img2.14.png" width="518" height="240" alt="olk" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Después de declarar el cursor, se debe abrir (o activar) el cursor. Esto se hace con la instrucción OPEN. En esta instrucción el SELECT es ejecutado y su resultado es alojado en el espacio de la RAM reservado para ello.</span></p>
+<p><img src="img3.10.png" width="497" height="143" alt="gbv" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Para procesar los datos que hay dentro de un cursor, hay que recorrerlo. Un cursor se puede recorrer, leyendo tupla por tupla que hay en él. La instrucción para leer una tupla de un cursor es el FETCH. Es importante mencionar que cada vez que se lee una tupla de un cursor, los valores leidos deben llevarse a variables. Para este caso, la instrucción que seguría a continuación es la siguiente. En el FETCH se está leyendo la primera tupla almacenada en el cursor, el código, título y código de género del primer libro, y estos tres valores se almacenan en las variables @COD, @PRE y @CODG.</span></p>
+<p><img src="img4.9.png" width="564" height="275" alt="zxc" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Después de leer la primera tupla, hay que procesarla según las necesidades. Es decir, al leer la primera tupla, hay que verificar si dicho libro cumple con las condiciones especificadas, es decir, si su precio es inferior a 100000 y su código de género es 200 o 300. Por lo tanto, hay que preguntar, con un IF, si la variable @PRE es menor que 1000000 y la variable @CODG es igual a 200 o 300.</span></p>
+<p><img src="img5.5.png" width="646" height="181" alt="xcv" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Si las condiciones del IF se cumplen, hay que incrementarle en un 16% el precio a ese libro. Cómo saber cuál libro es? El código del libro que hay que actualizarle el precio está en la variable @COD. Por eso, dentro del IF hay un UPDATE.</span></p>
+<p><img src="img6.3.png" width="670" height="142" alt="xcv" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Luego de verificar si al primer libro leído hay que incrementarle el precio, hay que leer la siguiente tupla del cursor. Y con dicho libro recién leído, se debe hacer exactamente lo mismo que se explicó anteriormente. Es más, con cada tupla leída del cursor, se debe hacer lo mismo. Por lo tanto, se sugiere la presencia de un ciclo. Miremos a continuación cómo queda la lógica:</span></p>
+<p><img src="img7.3.png" width="692" height="232" alt="xcs" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">En la anterior lógica, el primer FETCH se ejecuta antes del WHILE. Es decir, se lee la primera tupla del cursor. Luego, la lógica entra al WHILE y pregunta por las condiciones dadas y hace el UPDATE si las cumple. Luego, antes de cerrar el WHILE (con el END), se lee la siguiente tupla del cursor. Con el END, la lógica sube de nuevo al WHILE a verificar la condición y si se cumple, vuelve y entra al ciclo para verificar las condiciones del libro recién leído.</span></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Merece la pena explicar qué significa la condición que hay en el WHILE. En Transact SQL, cuando hay una palabra antecedida por doble @ (@@FETCH_STATUS), significa una variable interna de SQL Server (no una variable de usuario). SQL server internamente tiene muchas variables predefinidas que sirven para verificar ciertas situaciones. Una de esas variables se llama FETCH_STATUS. Dicha variable se comporta como un booleano, es decir, tiene dos posibles valores que nos interesa (en realidad, dicha variable tiene 4 posibles valores, pero hay dos que nos interesa). Los posibles valores de interés son los siguientes:</span></p>
+<ul>
+<li style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif; color: #333333; font-size: 1.05em;">0: El último FETCH ejecutado fue exitoso, es decir, se pudo leer una tupla del cursor.</span></li>
+<li style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif; color: #333333; font-size: 1.05em;">Diferente de 0: El último FETCH falló. El fallo pudo ser por varias razones, pero lo importante es entender que si dicha variable no es 0, el último FETCH no pudo leer una tupla del cursor.</span></li>
+</ul>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Entonces, siguiendo la explicación anterior y mirando la anterior lógica, vemos que el WHILE se ejecuta mientras el valor de FETCH_STATUS es igual a cero, es decir, mientras el último FETCH haya podido leer una tupla del cursor. Por eso, se debe poner la lectura de la primera tupla del cursor antes del WHILE, y al finalizar la lógica del WHILE se debe poner el siguiente FETCH.</span></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Cuando la lógica se sale del WHILE es porque ya leyó todas las tuplas del cursor, es decir, ya leyó todas los libros. Es hora de cerrar (o deshabilitar) el cursor con la instrucción CLOSE. Como el CLOSE no borra físicamente el cursor de la RAM, a continuación se coloca la instrucción DEALLOCATE.</span></p>
+<p><img src="img8.png" width="671" height="287" alt="xcv" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">La lógica completa del procedimiento almacenado es la siguiente:</span></p>
+<p><img src="img9.png" width="455" height="490" alt="xcv" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Mirando los datos, a los libros que hay que aumentarles el precio son a los de código 100, 200 y 600. Los demás deben quedar con el mismo precio que tienen.</span></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Al ejecutar el procedimiento, efectivamente sucede lo anterior.</span></p>
+<p><img src="img10.png" width="497" height="530" alt="xcv" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">A manera de conclusión, cuando se va a implementar un cursor en la lógica de algún proceso, éste pasa por 5 estados:</span></p>
+<ul style="text-align: justify;">
+<li><span style="font-family: verdana, geneva, sans-serif; color: #333333; font-size: 1.05em;">Declaración del cursor</span></li>
+<li><span style="font-family: verdana, geneva, sans-serif; color: #333333; font-size: 1.05em;">Abrir (activar) el cursor</span></li>
+<li><span style="font-family: verdana, geneva, sans-serif; color: #333333; font-size: 1.05em;">Procesar las tuplas del cursor</span></li>
+<li><span style="font-family: verdana, geneva, sans-serif; color: #333333; font-size: 1.05em;">Cerrar (desactivar)  el cursor</span></li>
+<li><span style="font-family: verdana, geneva, sans-serif; color: #333333; font-size: 1.05em;">Borrar el contenido del cursor de la RAM</span></li>
+</ul>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Como se puede observar en el ejemplo desarrollado en este módulo, el cursor se utilizó para almacenar temporalmente los datos de los libros. Este almacenamiento se hizo a través de un SELECT hecho sobre la tabla LIBRO. Y dentro del WHILE, cuya condición siempre será la misma en el caso de que se necesite recorrer todas las tuplas del cursor, se hace el procesamiento de cada una de las tuplas contenidas en el cursor. Al final, cuando ya no se necesita más, se cierra y borra el cursor.</span></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Video:</span></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;"><a href="https://youtu.be/BCCcxZPz6xc">Manejo de Cursores</a></span></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="transacciones__atomicidad.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="temas_adicionales.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

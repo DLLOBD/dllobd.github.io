@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>CONTROL DE ERRORES | DESARROLLO DE BASES DE DATOS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="JORGE IVAN BEDOYA RESTREPO" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-44"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">DESARROLLO DE BASES DE DATOS</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">DESARROLLO DE BASES DE DATOS</a></li>
+   <li><a href="introduccion_a_sql_server.html" class="daddy">INTRODUCCION A SQL SERVER</a>
+   <ul class="other-section">
+      <li><a href="lenguaje_sql.html" class="no-ch">LENGUAJE SQL</a></li>
+      <li><a href="sql_vs_sql_server.html" class="no-ch">SQL VS SQL SERVER</a></li>
+      <li><a href="historia_de_sql_server.html" class="no-ch">HISTORIA DE SQL SERVER</a></li>
+      <li><a href="conectar_a_sql_server.html" class="no-ch">CONECTAR A SQL SERVER</a></li>
+      <li><a href="bases_de_datos_del_sistema.html" class="no-ch">BASES DE DATOS DEL SISTEMA</a></li>
+      <li><a href="gestion_de_backups.html" class="no-ch">GESTION DE BACKUPS</a></li>
+   </ul>
+   </li>
+   <li><a href="crud_en_sql_server.html" class="daddy">CRUD EN SQL SERVER</a>
+   <ul class="other-section">
+      <li><a href="gestion_de_bases_de_datos.html" class="no-ch">GESTION DE BASES DE DATOS</a></li>
+      <li><a href="gestion_de_tablas.html" class="no-ch">GESTION DE TABLAS</a></li>
+      <li><a href="campos_tipo_identity.html" class="no-ch">CAMPOS TIPO IDENTITY</a></li>
+      <li><a href="insercion_de_datos.html" class="no-ch">INSERCION DE DATOS</a></li>
+      <li><a href="actualizacion_de_datos.html" class="no-ch">ACTUALIZACION DE DATOS</a></li>
+      <li><a href="borrado_de_datos.html" class="no-ch">BORRADO DE DATOS</a></li>
+   </ul>
+   </li>
+   <li><a href="consulta_de_datos.html" class="daddy">CONSULTA DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="consultas_bsicas.html" class="no-ch">CONSULTAS BÁSICAS</a></li>
+      <li><a href="clusulas_and_or_between_in_like.html" class="no-ch">CLÁUSULAS AND, OR, BETWEEN, IN, LIKE</a></li>
+      <li><a href="cualificacin_de_atributos.html" class="no-ch">CUALIFICACIÓN DE ATRIBUTOS</a></li>
+      <li><a href="funciones_agregadas.html" class="no-ch">FUNCIONES AGREGADAS</a></li>
+      <li><a href="ttulos_a_columnas_del_resultado.html" class="no-ch">TÍTULOS A COLUMNAS DEL RESULTADO</a></li>
+      <li><a href="clusulas_lower_y_upper.html" class="no-ch">CLÁUSULAS LOWER Y UPPER</a></li>
+      <li><a href="clusulas_day_month_year_substring.html" class="no-ch">CLÁUSULAS DAY, MONTH, YEAR, SUBSTRING</a></li>
+      <li><a href="order_by__asc__desc.html" class="no-ch">ORDER BY ... ASC / DESC</a></li>
+      <li><a href="clausula_top.html" class="no-ch">CLAUSULA TOP</a></li>
+      <li><a href="subconsultas.html" class="no-ch">SUBCONSULTAS</a></li>
+      <li><a href="clausula_group_by__having.html" class="no-ch">CLAUSULA GROUP BY / HAVING</a></li>
+      <li><a href="clausulas_any_y_all.html" class="no-ch">CLAUSULAS ANY Y ALL</a></li>
+   </ul>
+   </li>
+   <li><a href="relacion_entre_tablas.html" class="daddy">RELACION ENTRE TABLAS</a>
+   <ul class="other-section">
+      <li><a href="cmo_se_relacionan_tablas.html" class="no-ch">CÓMO SE RELACIONAN TABLAS?</a></li>
+      <li><a href="diagrama_de_la_base_de_datos.html" class="no-ch">DIAGRAMA DE LA BASE DE DATOS</a></li>
+      <li><a href="integridad_referencial.html" class="no-ch">INTEGRIDAD REFERENCIAL</a></li>
+   </ul>
+   </li>
+   <li><a href="joins.html" class="daddy">JOINS</a>
+   <ul class="other-section">
+      <li><a href="concepto_de_join.html" class="no-ch">CONCEPTO DE JOIN</a></li>
+      <li><a href="tipos_de_joins.html" class="daddy">TIPOS DE JOINS</a>
+      <ul class="other-section">
+         <li><a href="inner_join.html" class="no-ch">INNER JOIN</a></li>
+         <li><a href="left__right__full_join.html" class="no-ch">LEFT / RIGHT / FULL JOIN</a></li>
+      </ul>
+      </li>
+      <li><a href="joins_de_mas_de_dos_tablas.html" class="no-ch">JOINS DE MAS DE DOS TABLAS</a></li>
+   </ul>
+   </li>
+   <li><a href="algebra_relacional.html" class="daddy">ALGEBRA RELACIONAL</a>
+   <ul class="other-section">
+      <li><a href="introduccionque_es.html" class="no-ch">INTRODUCCION.....QUE ES?</a></li>
+      <li><a href="tipos_de_operaciones.html" class="no-ch">TIPOS DE OPERACIONES</a></li>
+      <li><a href="operaciones.html" class="daddy">OPERACIONES</a>
+      <ul class="other-section">
+         <li><a href="primarias.html" class="daddy">PRIMARIAS</a>
+         <ul class="other-section">
+            <li><a href="seleccion.html" class="no-ch">SELECCION</a></li>
+            <li><a href="proyeccion.html" class="no-ch">PROYECCION</a></li>
+            <li><a href="renombramiento.html" class="no-ch">RENOMBRAMIENTO</a></li>
+            <li><a href="union.html" class="no-ch">UNION</a></li>
+            <li><a href="diferencia.html" class="no-ch">DIFERENCIA</a></li>
+            <li><a href="producto_cartesiano.html" class="no-ch">PRODUCTO CARTESIANO</a></li>
+         </ul>
+         </li>
+         <li><a href="secundarias.html" class="daddy">SECUNDARIAS</a>
+         <ul class="other-section">
+            <li><a href="reunion_natural.html" class="no-ch">REUNION NATURAL</a></li>
+            <li><a href="interseccion.html" class="no-ch">INTERSECCION</a></li>
+            <li><a href="division.html" class="no-ch">DIVISION</a></li>
+         </ul>
+         </li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="vistas.html" class="no-ch">VISTAS</a></li>
+   <li><a href="calcular_atributos_derivados.html" class="no-ch">CALCULAR ATRIBUTOS DERIVADOS</a></li>
+   <li><a href="check_constraints.html" class="no-ch">CHECK CONSTRAINTS</a></li>
+   <li class="current-page-parent"><a href="programacion_de_bases_de_datos.html" class="current-page-parent daddy">PROGRAMACION DE BASES DE DATOS</a>
+   <ul>
+      <li><a href="procedimientos_almacenados.html" class="no-ch">PROCEDIMIENTOS ALMACENADOS</a></li>
+      <li><a href="funciones_de_usuario.html" class="daddy">FUNCIONES DE USUARIO</a>
+      <ul class="other-section">
+         <li><a href="funciones_escalares.html" class="no-ch">FUNCIONES ESCALARES</a></li>
+         <li><a href="funciones_de_tablas.html" class="no-ch">FUNCIONES DE TABLAS</a></li>
+      </ul>
+      </li>
+      <li><a href="triggers.html" class="no-ch">TRIGGERS</a></li>
+      <li id="active"><a href="control_de_errores.html" class="active no-ch">CONTROL DE ERRORES</a></li>
+      <li><a href="transacciones__atomicidad.html" class="no-ch">TRANSACCIONES / ATOMICIDAD</a></li>
+      <li><a href="manejo_de_cursores.html" class="no-ch">MANEJO DE CURSORES</a></li>
+   </ul>
+   </li>
+   <li><a href="temas_adicionales.html" class="daddy">TEMAS ADICIONALES</a>
+   <ul class="other-section">
+      <li><a href="encriptamiento_de_datos.html" class="no-ch">ENCRIPTAMIENTO DE DATOS</a></li>
+      <li><a href="clusula_case.html" class="no-ch">CLÁUSULA CASE</a></li>
+      <li><a href="inserts_con_datos_de_otras_tablas.html" class="no-ch">INSERTs CON DATOS DE OTRAS TABLAS</a></li>
+      <li><a href="manejo_de_nulos.html" class="no-ch">MANEJO DE NULOS</a></li>
+      <li><a href="truncate_vs_delete_vs_drop.html" class="no-ch">TRUNCATE vs DELETE vs DROP</a></li>
+      <li><a href="merge.html" class="no-ch">MERGE</a></li>
+      <li><a href="otros_comodines_del_like.html" class="no-ch">OTROS COMODINES DEL LIKE</a></li>
+      <li><a href="funciones_numricas.html" class="no-ch">FUNCIONES NUMÉRICAS</a></li>
+      <li><a href="funciones_tipo_fecha.html" class="no-ch">FUNCIONES TIPO FECHA</a></li>
+      <li><a href="funciones_tipo_string.html" class="no-ch">FUNCIONES TIPO STRING</a></li>
+      <li><a href="clausula_default.html" class="no-ch">CLAUSULA DEFAULT</a></li>
+      <li><a href="clausula_distinct.html" class="no-ch">CLAUSULA DISTINCT</a></li>
+      <li><a href="borrado__actualizacion_en_cascada.html" class="no-ch">BORRADO / ACTUALIZACION EN CASCADA</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="triggers.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="transacciones__atomicidad.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">CONTROL DE ERRORES</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id104">
+<div class="iDevice emphasis0" >
+<div id="ta104_112_2" class="block iDevice_content">
+<div class="exe-text"><table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 45.3227%;">
+<p style="text-align: justify;"><img src="img0.11.png" width="363" height="244" alt="ESTA" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;"><span style="font-size: 12pt;">Fuente. https://www.presteamshop.com/blog/activar-errores-prestashop/</span></p>
+</td>
+<td style="width: 54.6773%;">
+<p style="text-align: justify;"><span style="font-size: 12pt;">El control/gestión de errores es una parte importante de la programación.</span></p>
+<p style="text-align: justify;"><span style="font-size: 12pt;">A través de la implementación del control de errores en nuestros programas, tenemos el control de la lógica del programa cuando éste falla.</span></p>
+<p style="text-align: justify;"><span style="font-size: 12pt;">En este módulo se aborda el tema de cómo implementar el control de errores en la programación de bases de datos.</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">En general, cuando un programa no implementa control o gestión de errores, lo que sucede es que cuando la lógica falla por cualquier motivo, el flujo de ejecución del programa se suspende y se muestra un mensaje de error generado por el sistema, llámese sistema operativo, manejador de bases de datos, etc.</span></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Muchas veces se necesita que cuando el programa falle, no se aborte el flujo de ejecución del mismo, sino que se ejecute una lógica específica. Para eso se implementa el control de errores.</span></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Para implementar esto en la programación de bases de datos en SQL Server, se utilizan las instrucciones TRY y CATCH.</span></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">A continuación se explica, con un ejemplo concreto, cómo se implementa el control de errores.</span></p>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 45.2292%;"><img src="img1.11.png" width="398" height="312" alt="BVC" style="display: block; margin-left: auto; margin-right: auto;" /></td>
+<td style="width: 54.7708%;">
+<p style="text-align: justify;"><span style="font-size: 12pt;">Suponer que se tiene una tabla llamada EMPLEADO, donde se almacenarán los datos de los empleados de una compañía. Uno de sus campos es la EDAD del empleado.</span></p>
+<p style="text-align: justify;"><span style="font-size: 12pt;">Por aspectos legales, ningún empleado puede ser contratado si no es mayor de edad, es decir, si no tiene 18 años o más.</span></p>
+<p style="text-align: justify;"><span style="font-size: 12pt;">Por eso, al campo EDAD de la tabla EMPLEADO se le crea un check constraint que indique que siempre la edad del empleado debe ser mayor o igual a 18.</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Es decir, si en algún programa se trata de insertar un nuevo empleado con edad menor a 18, el programa fallará, ya que estaría tratando de violar el check constraint.</span></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">A continuación se muestra como se comporta un procedimiento almacenado que trate de grabar un empleado menor de edad y que no implemente control de errores.</span></p>
+<p><img src="img2.11.png" width="699" height="156" alt="MNC" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">A continuación se ejecuta el anterior procedimiento almacenado, enviando los 4 parámetros requeridos, siendo la edad menor de 18.</span></p>
+<p><img src="img3.7.png" width="735" height="130" alt="ERR" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Como era de esperarse, la ejecución falla y como no hay control de errores, se genera el error interno de SQL Server, indicando que se está tratando de violar un check constraint en la tabla EMPLEADO.</span></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Por otra parte, si se desea escribir el anterior programa, implementando control de errores, se utiliza las intrucciones TRY y CATCH de la siguiente manera:</span></p>
+<p><img src="img4.6.png" width="699" height="346" alt="BCN" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Se puede observar que se crean dos secciones dentro de la lógica del programa: la sección TRY y la sección CATCH. Al igual que en otros lenguajes de programación, por ejemplo JAVA, la lógica normal del programa debe ir en la sección TRY, mientras que la lógica que se desea ejecutar cuando el programa falla, va en la sección CATCH. En este caso, cuando el programa falle, se va para la sección CATCH e imprime el mensaje de error especificado, no el generado automáticamente por SQL Server.</span></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Al ejecutar, de nuevo, el procedimiento almacenado tratando de violar el check constraint, sucede lo siguiente:</span></p>
+<p><img src="img5.4.png" width="728" height="199" alt="XCV" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">El programa nunca suspendió su flujo de ejecución. Simplemente, cuando falló, pasó la lógica a las intrucciones que hay en la sección CATCH. Se tiene el control del flujo de ejecución, aún cuando hay falla.</span></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Es de anotar que, dependiendo de la lógica del programa y aunque no es muy común, pueden haber control de errores anidados, es decir, TRYs dentro de otros TRYs. Lo importante es que la regla es que si existen N TRYs, deben haber N CATCHs.</span></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Dentro de la sección CATCH, existen algunas funciones propias de SQL Server que nos permiten conocer un poco más acerca del error sucedido:</span></p>
+<ul>
+<li style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif; color: #333333; font-size: 1.05em;">ERROR_NUMBER(): Devuelve el código de error generado.</span></li>
+<li style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif; color: #333333; font-size: 1.05em;">ERROR_SEVERITY(): Devuelve un entero, indicando el grado de severidad del error.</span></li>
+<li style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif; color: #333333; font-size: 1.05em;">ERROR_PROCEDURE(): Devuelve el nombre del procedimiento almacenado o trigger donde se produjo el error.</span></li>
+<li style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif; color: #333333; font-size: 1.05em;">ERROR_LINE(): Devuelve el número de linea donde se produjo el error dentro de la lógica.</span></li>
+<li style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif; color: #333333; font-size: 1.05em;">ERROR_MESSAGE(): Devuelve el mensaje de error detallado que hubiera generado SQL Server.</span></li>
+</ul>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Como gran conclusión, es una buena práctica implementar control de errores en nuestros procedimientos almacenados y/o triggers. En las funciones de usuarios no está permitido implementar control de errores.</span></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif;">Video:</span></p>
+<p style="text-align: justify;"><strong><span style="font-family: verdana, geneva, sans-serif;"><a href="https://www.youtube.com/watch?v=Q8HL96c1QZk&amp;t=17s">Control de Errores</a></span></strong></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="triggers.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="transacciones__atomicidad.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>
